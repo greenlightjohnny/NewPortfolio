@@ -1,9 +1,13 @@
-*, html, body {
+*,
+html,
+body {
   padding: 0;
   margin: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -30,15 +34,14 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid red;
-  height: 40px;
+  height: 4rem;
 }
 
 nav .logo {
   margin-left: 1rem;
   font-size: 2rem;
   text-decoration: none;
-  color: springgreen;
+  color: #3a1aaa;
   font-weight: bold;
 }
 
@@ -53,16 +56,39 @@ nav ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  height: 100%;
 }
 
 nav ul li {
   margin: 0 1rem 0 1rem;
+  -webkit-transition: all 0.7s cubic-bezier(0.07, 0.9, 0.2, 0.9) 0s;
+  transition: all 0.7s cubic-bezier(0.07, 0.9, 0.2, 0.9) 0s;
 }
 
 nav ul li a {
+  display: block;
+  padding-top: 12px;
   text-decoration: none;
+  height: 100%;
   color: #f4f4f4;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+nav ul li a:after {
+  content: '';
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background: #2b1ac7;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 5px;
+}
+
+nav ul li:hover a:after {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

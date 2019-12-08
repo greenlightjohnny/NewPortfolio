@@ -1,51 +1,92 @@
-*, html, body {
-    padding: 0;
-    margin: 0;
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 html {
-    background: #0c0c0c;
-    font-family: Arial, Helvetica, sans-serif;
+  background: #0c0c0c;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-
+$f4white: #f4f4f4;
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 //////////////////////// NAVIGATION ///////////////////////////////////
 
 nav {
+  display: flex;
+  flex: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+  //border: 1px solid red;
+  height: 4rem;
+  .logo {
+    margin-left: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: rgb(58, 26, 170);
+    font-weight: bold;
+  }
+  ul {
+    list-style-type: none;
     display: flex;
     flex: 1;
-    margin-left: 10%;
-    margin-right: 10%;
-    justify-content: space-between;
-    align-content: space-between;
-    align-items: center;
-    border: 1px solid red;
-    height: 40px;
-    .logo {
-        margin-left: 1rem;
-        font-size: 2rem;
+    justify-content: flex-end;
+    height: 100%;
+    li {
+      margin: 0 1rem 0 1rem;
+      
+      transition: all 0.7s cubic-bezier(0.07, 0.9, 0.2, 0.9) 0s;
+      //padding-top: 12px;
+     
+      
+      a {
+        display: block;
+        padding-top: 12px;
         text-decoration: none;
-        color: springgreen;
+        height: 100%;
+        color: #f4f4f4;
+        text-transform: uppercase;
         font-weight: bold;
+        
+      }
+      a:after {
+        content: '';
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 0;
+        height: 2px;
+        background: #2b1ac7;
+        transition: .3s;
+        border-radius: 5px;
     }
-    ul {
-        list-style-type: none;
-        display: flex;
-        flex: 1;
-        justify-content: flex-end;
-        li {
-            margin: 0 1rem 0 1rem;
-            
-            a {
-                text-decoration: none;
-                color: #f4f4f4;
-                text-transform: uppercase;
-                font-weight: bold;
-            }
+
+      
+    }
+
+    li:hover {
+        
+  
+        a:after {
+            width: 100%;
         }
     }
+   
+  }
 }
