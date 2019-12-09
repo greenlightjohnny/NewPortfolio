@@ -31,27 +31,55 @@ function animateMenu() {
 }
 
 //////////////////SLIDE ON SCROLL/////////////////////////
+const tiles = document.querySelectorAll('.one');
+
 
 function slideIn() {
 
-    const tiles = document.querySelectorAll('.tiles');
+  console.log('hi')
+
+ tiles.forEach(i => {
+     const slideInAt = (window.scrollY + window.innerHeight) - 300 / 2;
+     const imageBottom = i.offsetTop + 300;
+
+     const isHalfShown = slideInAt > i.offsetTop;
+     const isNotScrolledPast = window.scrollY < imageBottom;
+    console.log(isNotScrolledPast)
+     if(isHalfShown && isNotScrolledPast) {
+         i.classList.add('fromLeft')
+     } else {
+         i.classList.remove('fromLeft')
+     }
+ })
+    
+    // tiles.forEach(i => {
+    //     const rect = i.getBoundingClientRect();
+    //     const elemTop = rect.top;
+    //     const elemBottom = rect.bottom;
+    //     console.log(elemTop);
+    //     if((elemTop >= 0) && (elemBottom <= window.innerHeight)) {
+    //         i.classList.add('fromLeft')
+    //     } else {
+    //         i.classList.remove('fromLeft')
+    //     }
+    // })
+
 
    
 
-    tiles.forEach(i => {
-
-        if (i.getBoundingClientRect().top + i.scrollHeight / 1.2 + document.documentElement.scrollTop < window.scrollY + window.innerHeight) {
-            i.classList.remove('hidden');
-            i.classList.add('fade-in-element');
-
-        } else {
-            i.classList.add('hidden');
-            i.classList.remove('fade-in-element');
-        }
-
-
-    })
+    
 
     
 }
-window.addEventListener('scroll', slideIn);
+
+function debounce(func, wait = 20, immediate=true) {
+    let timeout;
+    return function(...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        func.apply(this, args);
+      }, wait);
+    };
+  }
+
+window.addEventListener('scroll', debounce(slideIn));

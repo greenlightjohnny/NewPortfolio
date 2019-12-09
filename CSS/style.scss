@@ -497,6 +497,7 @@ header {
         flex: 1;
         flex-wrap: wrap;
         justify-content: center;
+        //overflow: hidden;
 
         @include tabletL {
             margin: 0 auto;
@@ -619,3 +620,16 @@ header {
 /////////// ANIMATIONS ///////////////
 
 ///// LEFT ///////
+
+.one {
+    transform: translateY(2rem);
+    transition: transform 300ms, opacity ease-in-out 100ms;
+    opacity: 0; 
+    overflow-y: hidden;
+    transform: scale(.9);
+}
+
+.fromLeft {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
