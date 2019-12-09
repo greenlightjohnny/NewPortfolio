@@ -17,10 +17,6 @@ html {
   font-family: Arial, Helvetica, 'Source Sans Pro', sans-serif;
 }
 
-body {
-  height: 200vh;
-}
-
 header {
   position: relative;
   height: 100vh;
@@ -67,7 +63,7 @@ header {
 }
 
 .navHeight {
-  height: 200vh;
+  height: 100vh;
 }
 
 .ulShow {
@@ -339,10 +335,6 @@ header p {
   margin-top: 0;
 }
 
-.projects {
-  height: 200vh;
-}
-
 .projects .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -481,10 +473,10 @@ header p {
 .one {
   -webkit-transform: translateY(2rem);
           transform: translateY(2rem);
-  -webkit-transition: opacity ease-in-out 100ms, -webkit-transform 300ms;
-  transition: opacity ease-in-out 100ms, -webkit-transform 300ms;
-  transition: transform 300ms, opacity ease-in-out 100ms;
-  transition: transform 300ms, opacity ease-in-out 100ms, -webkit-transform 300ms;
+  -webkit-transition: opacity ease-in-out 500ms, -webkit-transform 300ms;
+  transition: opacity ease-in-out 500ms, -webkit-transform 300ms;
+  transition: transform 300ms, opacity ease-in-out 500ms;
+  transition: transform 300ms, opacity ease-in-out 500ms, -webkit-transform 300ms;
   opacity: 0;
   overflow-y: hidden;
   -webkit-transform: scale(0.9);
@@ -495,5 +487,187 @@ header p {
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
   opacity: 1;
+}
+
+.contact {
+  background: #0c0c0c;
+  color: white;
+}
+
+.contact .flexC {
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 900px) {
+  .contact .flexC {
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.contact .callMe {
+  width: 90%;
+  min-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .callMe h3 {
+  font-size: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  .contact .callMe h3 {
+    text-align: left;
+  }
+}
+
+.contact .callMe h3:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  left: 10%;
+  bottom: -10px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #ef2e5d), color-stop(80%, transparent));
+  background: linear-gradient(to right, #ef2e5d 20%, transparent 80%);
+}
+
+@media (min-width: 650px) {
+  .contact .callMe h3:after {
+    left: 0px;
+  }
+}
+
+.contact .callMe p {
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+  padding-right: 2.5rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 650px) {
+  .contact .callMe {
+    max-width: 450px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact .callMe {
+    margin: 0;
+  }
+}
+
+.contact h2 {
+  font-size: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  color: #fc2232;
+  font-family: 'Source Sans Pro';
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 650px) {
+  .contact h2 {
+    padding-top: 16rem;
+  }
+}
+
+.contact .form {
+  margin: 0 auto;
+  width: 90%;
+  min-width: 300px;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 650px) {
+  .contact .form {
+    max-width: 450px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact .form {
+    margin: 0;
+  }
+}
+
+.contact form div + div {
+  margin-top: 1rem;
+}
+
+.contact label {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  font-size: 1.1rem;
+  margin-bottom: .3rem;
+}
+
+.contact textarea {
+  vertical-align: top;
+}
+
+.contact input, .contact textarea {
+  font-family: 'rubik';
+  width: 100%;
+  background: transparent;
+  border: 1px solid #fdfdfd;
+  border-radius: 2px;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 2rem;
+  border: 1px solid #66b0ff;
+}
+
+.contact input {
+  border: 1px solid #66b0ff;
+}
+
+.contact input:focus, .contact textarea:focus {
+  outline: none;
+  border: 1px solid #ef2e5d;
+}
+
+.contact button {
+  width: 10rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background-color: transparent;
+  border: 1px solid turquoise;
+  letter-spacing: .3rem;
+  text-transform: uppercase;
+  -webkit-transition: all ease-in-out .4s;
+  transition: all ease-in-out .4s;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.contact button:hover {
+  cursor: pointer;
+  background-color: #ef2e5d;
 }
 /*# sourceMappingURL=style.css.map */

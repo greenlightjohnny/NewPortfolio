@@ -16,7 +16,7 @@ html {
   font-family: Arial, Helvetica, 'Source Sans Pro', sans-serif;
 }
 body {
-    height: 200vh;
+    
 }
 
 @mixin phone {
@@ -183,7 +183,7 @@ header {
 }
 
 .navHeight {
-    height: 200vh;
+    height: 100vh;
 }
 .ulShow {
     height: auto;
@@ -488,7 +488,7 @@ header {
 
 /////////////////////////////////// PROJECTS //////////////////////////////
 .projects {
-    height: 200vh;
+    //height: 200vh;
     
 
 
@@ -623,7 +623,7 @@ header {
 
 .one {
     transform: translateY(2rem);
-    transition: transform 300ms, opacity ease-in-out 100ms;
+    transition: transform 300ms, opacity ease-in-out 500ms;
     opacity: 0; 
     overflow-y: hidden;
     transform: scale(.9);
@@ -633,3 +633,182 @@ header {
     transform: translateY(0) scale(1);
     opacity: 1;
 }
+
+
+
+////////////////////// CONTACT ///////////////
+
+.contact {
+    background: #0c0c0c;
+    
+
+
+    .flexC {
+        padding-bottom: 3rem;
+        @include tabletL {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+       
+        justify-content: center;
+        flex: 1;
+        }
+    }
+
+    .callMe {
+        width: 90%;
+        min-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        position: relative;
+        overflow: hidden;
+
+        h3 {
+            font-size: 2rem;
+           position: relative;
+           text-align: center;
+
+           @include tabletM {
+            text-align: left;
+           }
+           
+        }
+
+        h3:after {
+            content: "";
+            width: 100%;
+            
+            position: absolute;
+            height: 2px;
+            left: 10%;
+            bottom: -10px;
+            background: linear-gradient(to right, $pinkish 20%, transparent 80%);
+
+            @include tabletM {
+                left: 0px;
+            }
+        }
+
+        p {
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+            padding-right: 2.5rem;
+            line-height: 1.5rem;
+            
+        }
+        @include tabletM {
+            
+            max-width: 450px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        @include tabletL {
+            margin: 0;
+        }
+    }
+    
+    h2 {
+        //text-align: center;
+        font-size: 3rem;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+        color: #fc2232;
+        font-family: 'Source Sans Pro';
+        max-width: 900px;
+        margin: 0 auto;
+        @include tabletM {
+            padding-top: 16rem;
+        }
+        
+    }
+    
+    
+    color: white;
+
+
+    .form {
+        margin: 0 auto;
+        width: 90%;
+        min-width: 300px;
+    
+        margin-bottom: 3rem;
+
+        @include tabletM {
+            
+            max-width: 450px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        @include tabletL {
+            margin: 0;
+        }
+    }
+
+    form div + div {
+        margin-top: 1rem;
+    }
+
+    
+
+    label {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        font-size: 1.1rem;
+        margin-bottom: .3rem;
+    }
+
+    textarea {
+        vertical-align: top;
+    }
+
+    input, textarea {
+       
+        font-family: 'rubik';
+        width: 100%;
+        background: transparent;
+        
+        border: 1px solid #fdfdfd;
+        border-radius: 2px;
+        font-size: 1.1rem;
+        color: #fff;
+        
+        line-height: 2rem;
+        border: 1px solid $bluish;
+    }
+
+    input {
+        border: 1px solid $bluish;
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        border: 1px solid $pinkish;
+    }
+
+   
+    button {
+        
+        width: 10rem;
+        color: white;
+        font-weight: bold;
+        font-size: 1.4rem;
+        background-color: transparent;
+        border: 1px solid turquoise;
+        //border-radius: 15px;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        transition: all ease-in-out .4s;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: #ef2e5d;
+    }
+  
+    
+  }
