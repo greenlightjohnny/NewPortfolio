@@ -29,3 +29,29 @@ function animateMenu() {
     nav.classList.toggle('expand');
 
 }
+
+//////////////////SLIDE ON SCROLL/////////////////////////
+
+function slideIn() {
+
+    const tiles = document.querySelectorAll('.tiles');
+
+   
+
+    tiles.forEach(i => {
+
+        if (i.getBoundingClientRect().top + i.scrollHeight / 1.2 + document.documentElement.scrollTop < window.scrollY + window.innerHeight) {
+            i.classList.remove('hidden');
+            i.classList.add('fade-in-element');
+
+        } else {
+            i.classList.add('hidden');
+            i.classList.remove('fade-in-element');
+        }
+
+
+    })
+
+    
+}
+window.addEventListener('scroll', slideIn);
