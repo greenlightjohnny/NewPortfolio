@@ -59,7 +59,7 @@ body {
   $bluish: #66b0ff;
   $white: white;
   $black: black;
-
+  $ham: #5185e4;
 
 // $f4white: #f4f4f4;
 // @mixin center {
@@ -152,7 +152,7 @@ header {
     transition: all ease-in-out 1s;
     transition: height 700ms linear;
     height: 50px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
     
 }
@@ -177,7 +177,7 @@ header {
     transition: all ease-in-out 1s;
     transition: height 700ms linear;
     height: 50px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
     
 }
@@ -248,16 +248,16 @@ nav {
     .mIcon,
     .mIcon:after,
     .mIcon:before {
-        height: 7px;
+        height: 5px;
         width: 100%;
-        border-radius: 3px;
+        border-radius: 1px;
 
     }
 
     .mIcon {
         position: relative;
         transform: translateY(20px);
-        background: $bluish;
+        background: $ham;
         transition: all 0ms 300ms;
 
         &.animate {
@@ -270,7 +270,7 @@ nav {
         position: absolute;
         left: 0;
         bottom: 15px;
-        background: $bluish;
+        background: $ham;
         transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 
     }
@@ -280,7 +280,7 @@ nav {
         position: absolute;
         left: 0;
         top: 15px;
-        background: $bluish;
+        background: $ham;
         transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 
     }
@@ -367,6 +367,8 @@ nav {
             height: 100%; 
             white-space: nowrap;
             background-color: transparent;
+            font-family: 'Source Sans Pro';
+            font-weight: bold;
             &:hover {
                 &:after {
                     width: 100%;
@@ -378,7 +380,8 @@ nav {
                 content: attr(data-hover);
                 display: block;
                 position: absolute;
-                color: #66b0ff;
+                //color: #66b0ff;
+                color: turquoise;
                 top: 20px;
                 left: 20px;
                 overflow: hidden;
@@ -407,7 +410,8 @@ nav {
                 width: 0;
                 height: 2px;
                 opacity: 0;
-                background-color: #66b0ff;
+                //background-color: #66b0ff;
+                background-color: turquoise;
                 //transform: translateX(500px);
                 transition: all .6s cubic-bezier(.66,.19,.19,1);
             }
@@ -429,6 +433,7 @@ nav {
 nav.expand {
     height: 100vh;
     transition: height 400ms linear;
+    background: #0c0c0c;
 }
 
 
@@ -448,10 +453,25 @@ header {
     }
 
     h1 {
-        color: #f4f4f4;
+        color: turquoise;
         font-family: 'Source Sans Pro';
+        font-size: 3rem;
+        margin-bottom: 1rem;
         @include tabletL {
-            font-size: 3rem;
+            font-size: 4rem;
+        }
+    }
+
+    .introHigh {
+        color: #f4f4f4;
+        //text-align: center;
+        width: 300px;
+        display: inline-block;
+        font-size: 3rem;
+       
+
+        @include tabletL {
+            //text-align: center;
         }
     }
 
@@ -461,6 +481,7 @@ header {
         font-family: 'Source Sans Pro';
         font-size: 1.1rem;
         font-weight: 400;
+        margin-top: 0;
     }
 }
 
@@ -510,7 +531,7 @@ header {
     }
 
     img:hover {
-        transform: scale(1.2);
+        transform: scale(1.05);
         //filter: sepia(0);
     }
 
@@ -579,4 +600,18 @@ header {
     // .one:before:hover ~ img:hover {
     //     transform: scale(1.1);
     // }
+}
+
+.pro {
+    max-width: 900px;
+    margin: 0 auto;
+
+    h2 {
+        color: #fc2232;
+        margin-left: 1rem;
+        font-size: 3rem;
+        margin-bottom: -.6rem;
+        z-index: 4;
+        font-family: 'Source Sans Pro';
+    }
 }
