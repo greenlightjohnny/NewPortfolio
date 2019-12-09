@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 html,
 body {
   padding: 0;
@@ -13,7 +14,7 @@ body {
 
 html {
   background: #0c0c0c;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, 'Source Sans Pro', sans-serif;
 }
 
 body {
@@ -78,7 +79,7 @@ header {
   opacity: 1;
   -webkit-transition: all ease-in-out 400ms;
   transition: all ease-in-out 400ms;
-  padding-top: 8rem;
+  padding-top: 7rem;
 }
 
 nav {
@@ -89,7 +90,7 @@ nav {
   top: 0;
   z-index: 3;
   width: 100%;
-  background: transparent;
+  background: #0c0c0c;
   font-size: 1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,6 +119,7 @@ nav .logo {
 nav .ham {
   display: inline-block;
   margin-right: 5%;
+  margin-top: 8px;
   width: 50px;
   height: 50px;
 }
@@ -221,8 +223,8 @@ nav li {
   display: block;
   position: relative;
   overflow-x: hidden;
-  height: 100%;
-  font-size: 2rem;
+  font-size: 1.3rem;
+  color: #ef2e5d;
 }
 
 @media (min-width: 900px) {
@@ -235,16 +237,8 @@ nav li {
 }
 
 nav li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: inline-block;
+  padding: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -254,28 +248,47 @@ nav li a {
   transition: color ease-in-out 400ms;
   position: relative;
   height: 100%;
+  white-space: nowrap;
+  background-color: transparent;
 }
 
-nav li:hover:after {
+nav li a:hover:after {
+  width: 100%;
+}
+
+nav li a:after {
+  content: attr(data-hover);
+  display: block;
+  position: absolute;
+  color: #66b0ff;
+  top: 20px;
+  left: 20px;
+  overflow: hidden;
+  width: 0;
+  height: 23px;
+  white-space: nowrap;
+  -webkit-transition: all 0.5s cubic-bezier(0.66, 0.19, 0.19, 1);
+  transition: all 0.5s cubic-bezier(0.66, 0.19, 0.19, 1);
+}
+
+nav li a:hover:before {
   opacity: 1;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  width: calc(100% - 40px);
 }
 
-nav li:after {
+nav li a:before {
   content: '';
   display: block;
   position: absolute;
-  left: 0;
-  bottom: 0px;
-  width: 100%;
+  right: 0;
+  left: 20px;
+  bottom: 13px;
+  width: 0;
   height: 2px;
   opacity: 0;
   background-color: #66b0ff;
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
-  -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.66, 0.19, 0.19, 1);
+  transition: all 0.6s cubic-bezier(0.66, 0.19, 0.19, 1);
 }
 
 nav.expand {
@@ -284,8 +297,102 @@ nav.expand {
   transition: height 400ms linear;
 }
 
-.fff {
+header .intro {
+  max-width: 320px;
+  margin: 0 auto;
+  margin-top: 40%;
+}
+
+@media (min-width: 900px) {
+  header .intro {
+    margin-left: 10%;
+    margin-top: 20%;
+    max-width: 400px;
+  }
+}
+
+header h1 {
+  color: #f4f4f4;
+  font-family: 'Source Sans Pro';
+}
+
+@media (min-width: 900px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+header p {
+  color: #f4f4f4;
+  line-height: 1.5rem;
+  font-family: 'Source Sans Pro';
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.projects {
   height: 200vh;
-  background: #f4f4f4;
+}
+
+.projects .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .projects .flex {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}
+
+.projects .flex > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 320px;
+  max-width: 420px;
+  min-height: 320px;
+  max-height: 420px;
+  background-color: #f4f4f4;
+  border: 1px solid red;
+  margin: 0 1rem 2rem 1rem;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .projects .flex > * {
+    min-width: 400px;
+  }
+}
+
+.projects img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  -webkit-transition: all ease-in-out .4s;
+  transition: all ease-in-out .4s;
+  overflow: hidden;
+}
+
+.projects img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.projects .one {
+  background-color: rgba(0, 0, 0, 0.19);
 }
 /*# sourceMappingURL=style.css.map */
