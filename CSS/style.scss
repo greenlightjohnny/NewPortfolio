@@ -203,7 +203,8 @@ nav {
     z-index: 3;
     width: 100%;
     //background: rgba(255, 255, 255, .9);
-    background: #0c0c0c;
+    //background: #0c0c0c;
+    background: transparent;
     font-size: 1.3rem;
     display: flex;
     justify-content: space-between;
@@ -486,11 +487,11 @@ header {
         display: flex;
         flex: 1;
         min-width: 320px;
-        max-width: 420px;
+        max-width: 460px;
         min-height: 320px;
-        max-height: 420px;
+        max-height: 460px;
         background-color: #f4f4f4;
-        border: 1px solid red;
+        //border: 1px solid red;
         margin: 0 1rem 2rem 1rem;
         overflow: hidden;
 
@@ -502,15 +503,80 @@ header {
     img {
         object-fit: contain;
         max-width: 100%;
-        transition: all ease-in-out .4s;
+        transition: transform ease-in-out .3s, filter ease-in-out 1s;
+        
         overflow: hidden;
+        //filter: sepia(1);
     }
 
     img:hover {
-        transform: scale(1.2)
+        transform: scale(1.2);
+        //filter: sepia(0);
     }
 
     .one {
-        background-color: rgba(0,0,0,0.19);
+        position: relative;
+
+        h2 {
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            color: #f4f4f4;
+            margin-left: 2rem;
+        }
     }
+
+    .imageOne {
+        filter: sepia(1);
+    }
+
+    .imageOne:hover {
+        filter: sepia(0);
+    }
+
+    .imageTwo {
+        filter: hue-rotate(270deg);
+
+        &:hover {
+            filter: hue-rotate(0deg);
+        }
+    }
+
+    .imageThree {
+        filter: hue-rotate(200deg);
+
+        &:hover {
+            filter: hue-rotate(0deg);
+        }
+    }
+
+    .imageFour {
+        filter: hue-rotate(100deg);
+
+        &:hover {
+            filter: hue-rotate(0deg);
+        }
+    }
+
+    .imageFive {
+        filter: hue-rotate(170deg);
+
+        &:hover {
+            filter: hue-rotate(0deg);
+        }
+    }
+
+    // .one:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     height: 100%;
+    //     width: 100%;
+    //     background-color: rgba(223, 161, 161, 0.19);
+    // }
+
+    // .one:before:hover ~ img:hover {
+    //     transform: scale(1.1);
+    // }
 }

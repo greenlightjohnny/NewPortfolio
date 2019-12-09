@@ -90,7 +90,7 @@ nav {
   top: 0;
   z-index: 3;
   width: 100%;
-  background: #0c0c0c;
+  background: transparent;
   font-size: 1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,11 +363,10 @@ header p {
       -ms-flex: 1;
           flex: 1;
   min-width: 320px;
-  max-width: 420px;
+  max-width: 460px;
   min-height: 320px;
-  max-height: 420px;
+  max-height: 460px;
   background-color: #f4f4f4;
-  border: 1px solid red;
   margin: 0 1rem 2rem 1rem;
   overflow: hidden;
 }
@@ -382,8 +381,10 @@ header p {
   -o-object-fit: contain;
      object-fit: contain;
   max-width: 100%;
-  -webkit-transition: all ease-in-out .4s;
-  transition: all ease-in-out .4s;
+  -webkit-transition: -webkit-transform ease-in-out .3s, -webkit-filter ease-in-out 1s;
+  transition: -webkit-transform ease-in-out .3s, -webkit-filter ease-in-out 1s;
+  transition: transform ease-in-out .3s, filter ease-in-out 1s;
+  transition: transform ease-in-out .3s, filter ease-in-out 1s, -webkit-transform ease-in-out .3s, -webkit-filter ease-in-out 1s;
   overflow: hidden;
 }
 
@@ -393,6 +394,64 @@ header p {
 }
 
 .projects .one {
-  background-color: rgba(0, 0, 0, 0.19);
+  position: relative;
+}
+
+.projects .one h2 {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  color: #f4f4f4;
+  margin-left: 2rem;
+}
+
+.projects .imageOne {
+  -webkit-filter: sepia(1);
+          filter: sepia(1);
+}
+
+.projects .imageOne:hover {
+  -webkit-filter: sepia(0);
+          filter: sepia(0);
+}
+
+.projects .imageTwo {
+  -webkit-filter: hue-rotate(270deg);
+          filter: hue-rotate(270deg);
+}
+
+.projects .imageTwo:hover {
+  -webkit-filter: hue-rotate(0deg);
+          filter: hue-rotate(0deg);
+}
+
+.projects .imageThree {
+  -webkit-filter: hue-rotate(200deg);
+          filter: hue-rotate(200deg);
+}
+
+.projects .imageThree:hover {
+  -webkit-filter: hue-rotate(0deg);
+          filter: hue-rotate(0deg);
+}
+
+.projects .imageFour {
+  -webkit-filter: hue-rotate(100deg);
+          filter: hue-rotate(100deg);
+}
+
+.projects .imageFour:hover {
+  -webkit-filter: hue-rotate(0deg);
+          filter: hue-rotate(0deg);
+}
+
+.projects .imageFive {
+  -webkit-filter: hue-rotate(170deg);
+          filter: hue-rotate(170deg);
+}
+
+.projects .imageFive:hover {
+  -webkit-filter: hue-rotate(0deg);
+          filter: hue-rotate(0deg);
 }
 /*# sourceMappingURL=style.css.map */
