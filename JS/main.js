@@ -28,7 +28,7 @@ function toggleMenu() {
     }
 }
 function animateMenu() {
-    console.log('hmm')
+    
     mIcon.classList.toggle('animate');
     ul.classList.toggle('ulShow');
     nav.classList.toggle('expand');
@@ -41,7 +41,7 @@ const tiles = document.querySelectorAll('.one');
 
 function slideIn() {
 
-  console.log('hi')
+  
 
  tiles.forEach(i => {
      const slideInAt = (window.scrollY + window.innerHeight) - 300 / 2;
@@ -49,7 +49,7 @@ function slideIn() {
 
      const isHalfShown = slideInAt > i.offsetTop;
      const isNotScrolledPast = window.scrollY < imageBottom;
-    console.log(isNotScrolledPast)
+    
      if(isHalfShown && isNotScrolledPast) {
          i.classList.add('fromLeft')
      } else {

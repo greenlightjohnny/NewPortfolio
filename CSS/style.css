@@ -631,27 +631,27 @@ header p {
   border-bottom: 1px solid turquoise;
 }
 
-.contact textarea input, .contact textarea textarea {
-  font-family: 'rubik';
+.contact input, .contact textarea {
+  font-family: 'Source Sans Pro';
   width: 100%;
   background: transparent;
-  border: 1px solid #fdfdfd;
+  border: 1px solid turquoise;
   border-radius: 2px;
   font-size: 1.1rem;
   color: #fff;
   line-height: 2rem;
 }
 
-.contact textarea input {
-  border: 1px solid #66b0ff;
+.contact input {
+  border: 1px solid turquoise;
 }
 
-.contact textarea input:focus, .contact textarea textarea:focus {
+.contact input:focus, .contact textarea:focus {
   outline: none;
   border: 1px solid #ef2e5d;
 }
 
-.contact textarea button {
+.contact button {
   width: 10rem;
   color: white;
   font-weight: bold;
@@ -666,7 +666,7 @@ header p {
   padding-bottom: 5px;
 }
 
-.contact textarea button:hover {
+.contact button:hover {
   cursor: pointer;
   background-color: #ef2e5d;
 }

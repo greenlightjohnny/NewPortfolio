@@ -15,9 +15,7 @@ html {
   background: #0c0c0c;
   font-family: Arial, Helvetica, 'Source Sans Pro', sans-serif;
 }
-body {
-    
-}
+
 
 @mixin phone {
     @media (max-width: 599px) {
@@ -759,19 +757,21 @@ header {
         width: 100%;
         font-size: 1.1rem;
         margin-bottom: .3rem;
+        
     }
 
     textarea {
         vertical-align: top;
         border-bottom: 1px solid turquoise;
+    }
 
     input, textarea {
        
-        font-family: 'rubik';
+        font-family: 'Source Sans Pro';
         width: 100%;
         background: transparent;
         
-        border: 1px solid #fdfdfd;
+        border: 1px solid turquoise;
         border-radius: 2px;
         font-size: 1.1rem;
         color: #fff;
@@ -781,7 +781,7 @@ header {
     }
 
     input {
-        border: 1px solid $bluish;
+        border: 1px solid turquoise;
     }
 
     input:focus, textarea:focus {
@@ -812,5 +812,4 @@ header {
     }
   
     
-  }
 }
