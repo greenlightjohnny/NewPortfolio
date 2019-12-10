@@ -1,0 +1,80 @@
+{
+    "short_name": "Jones",
+    "name": "Fred",
+    "lang": "en",
+    "description": "Portfolio of Fred Jones",
+    "start_url": "https://romantic-ride-249daa.netlify.com/",
+    "background_color": "#0c0c0c",
+    "theme_color": "#40e0d0",
+    "dir": "ltr",
+    "display": "standalone",
+    "orientation": "any",
+    "icons": [
+     {
+      "src": "IMG/android-icon-192x192-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "192x192"
+     },
+     {
+      "src": "IMG/apple-icon-180x180-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "180x180"
+     },
+     {
+      "src": "IMG/apple-icon-152x152-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "152x152"
+     },
+     {
+      "src": "IMG/apple-icon-144x144-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "144x144"
+     },
+     {
+      "src": "IMG/apple-icon-120x120-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "120x120"
+     },
+     {
+      "src": "IMG/apple-icon-114x114-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "114x114"
+     },
+     {
+      "src": "IMG/favicon-96x96-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "96x96"
+     },
+     {
+      "src": "IMG/apple-icon-76x76-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "76x76"
+     },
+     {
+      "src": "IMG/apple-icon-72x72-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "72x72"
+     },
+     {
+      "src": "IMG/apple-icon-60x60-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "60x60"
+     },
+     {
+      "src": "IMG/apple-icon-57x57-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "57x57"
+     },
+     {
+      "src": "IMG/favicon-32x32-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "32x32"
+     },
+     {
+      "src": "/IMGfavicon-16x16-dunplab-manifest-110.png",
+      "type": "image/png",
+      "sizes": "16x16"
+     }
+    ],
+    "prefer_related_applications": "false"
+   }
