@@ -1,21 +1,13 @@
-var responseContent =
-    "<html>" +
-    "<body>" +
-    "<style>" +
-    "body {text-align: center; background-color: #333; color: #eee;}" +
-    "</style>" +
-    "<h1>Video Voter</h1>" +
-    "<p>There seems to be a problem with your connection.</p>" +
-    "</body>" +
-    "</html>";
-
 self.addEventListener("fetch", function(event) {
     event.respondWith(
         fetch(event.request).catch(function() {
-            return new Response(
-                responseContent,
-                {headers: {"Content-Type": "text/html"}}
-            );
+            return caches.match(event.request).then(function(response) {
+                if (response) {
+                    return response;
+                } else if (event.request.headers.get("accept").includes("text/html")) {
+                    return caches.match("/offline.html");
+                }
+            });
         })
     );
 });
