@@ -1,23 +1,19 @@
-// This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
-
-// Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-
-// Check compatibility for the browser we're running this in
-if ("serviceWorker" in navigator) {
-    if (navigator.serviceWorker.controller) {
-      console.log("[PWA Builder] active service worker found, no need to register");
-    } else {
-      // Register the service worker
-      navigator.serviceWorker
-        .register("pwabuilder-sw.js", {
-          scope: "./"
-        })
-        .then(function (reg) {
-          console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-        });
-    }
+// register service worker — BEGINNING
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js', {scope: '/'}).then(function(reg) {
+      if(reg.installing) {
+        console.log('Service worker installing');
+      } else if(reg.waiting) {
+        console.log('Service worker installed');
+      } else if(reg.active) {
+        console.log('Service worker active');
+      }
+    }).catch(function(error) {
+      // registration failed
+      console.log('Registration failed with ' + error);
+    });
   }
-
+  // register service worker — END
 const ham = document.querySelector('.ham');
 const mIcon = document.querySelector('.mIcon');
 const ul = document.querySelector('ul');
