@@ -1,8 +1,44 @@
-if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('service worker registered'))
-      .catch(err => console.log('service worker not registered', err));
-  }
+// if('serviceWorker' in navigator){
+//     navigator.serviceWorker.register('/sw.js')
+//       .then(reg => console.log('service worker registered'))
+//       .catch(err => console.log('service worker not registered', err));
+//   }
+
+navigator.serviceWorker.register('sw.js', {scope: "/"})
+    .then(
+    function (reg) {
+        var serviceWorker;
+        if (reg.installing) {
+            serviceWorker = reg.installing;
+            // console.log('Service worker installing');
+        } else if (reg.waiting) {
+            serviceWorker = reg.waiting;
+            // console.log('Service worker installed & waiting');
+        } else if (reg.active) {
+            serviceWorker = reg.active;
+            // console.log('Service worker active');
+        }
+
+        if (serviceWorker) {
+            console.log("sw current state", serviceWorker.state);
+            if (serviceWorker.state == "activated") {
+                //If push subscription wasnt done yet have to do here
+                console.log("sw already activated - Do watever needed here");
+            }
+            serviceWorker.addEventListener("statechange", function(e) {
+                console.log("sw statechange : ", e.target.state);
+                if (e.target.state == "activated") {
+                    // use pushManger for subscribing here.
+                    console.log("Just now activated. now we can subscribe for push notification")
+                    subscribeForPushNotification(reg);
+                }
+            });
+        }
+    },
+    function (err) {
+        console.error('unsuccessful registration with ', workerFileName, err);
+    }
+);
 
 const ham = document.querySelector('.ham');
 const mIcon = document.querySelector('.mIcon');
