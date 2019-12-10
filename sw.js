@@ -2,7 +2,7 @@ const staticCacheName = 'site-static-v1';
 const assets = [
   '/',
   '/index.html',
-  '/JS/main.jss',
+  '/JS/main.js',
   '/CSS/style.css',
   '/IMG/bsquare.jpg',
   'https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap',
