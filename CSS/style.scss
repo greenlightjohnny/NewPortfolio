@@ -59,7 +59,7 @@ body {
   $bluish: #66b0ff;
   $white: white;
   $black: black;
-  $ham: #5185e4;
+  $ham: #f4f4f4;
 
 // $f4white: #f4f4f4;
 // @mixin center {
@@ -717,6 +717,7 @@ header {
         font-family: 'Source Sans Pro';
         max-width: 900px;
         margin: 0 auto;
+        padding-left: 1rem;
         @include tabletM {
             padding-top: 16rem;
         }
@@ -762,7 +763,7 @@ header {
 
     textarea {
         vertical-align: top;
-    }
+        border-bottom: 1px solid turquoise;
 
     input, textarea {
        
@@ -776,7 +777,7 @@ header {
         color: #fff;
         
         line-height: 2rem;
-        border: 1px solid $bluish;
+        //border: 1px solid $bluish;
     }
 
     input {
