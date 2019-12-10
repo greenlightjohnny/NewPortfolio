@@ -105,7 +105,6 @@ nav .logo {
   padding-top: 10px;
   font-size: 2rem;
   vertical-align: center;
-  background: turquoise;
 }
 
 nav .ham {
@@ -629,9 +628,10 @@ header p {
 
 .contact textarea {
   vertical-align: top;
+  border-bottom: 1px solid turquoise;
 }
 
-.contact input, .contact textarea {
+.contact textarea input, .contact textarea textarea {
   font-family: 'rubik';
   width: 100%;
   background: transparent;
@@ -642,16 +642,16 @@ header p {
   line-height: 2rem;
 }
 
-.contact input {
+.contact textarea input {
   border: 1px solid #66b0ff;
 }
 
-.contact input:focus, .contact textarea:focus {
+.contact textarea input:focus, .contact textarea textarea:focus {
   outline: none;
   border: 1px solid #ef2e5d;
 }
 
-.contact button {
+.contact textarea button {
   width: 10rem;
   color: white;
   font-weight: bold;
@@ -666,7 +666,7 @@ header p {
   padding-bottom: 5px;
 }
 
-.contact button:hover {
+.contact textarea button:hover {
   cursor: pointer;
   background-color: #ef2e5d;
 }
