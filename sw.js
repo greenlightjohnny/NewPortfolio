@@ -1,7 +1,7 @@
 const staticCacheName = 'site-static-v1';
 const assets = [
-  '/',
-  '/index.html',
+  //'/',
+  //'/index.html',
   '/JS/main.js',
   '/CSS/style.css',
   '/IMG/bsquare.jpg',
