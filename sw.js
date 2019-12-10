@@ -3,7 +3,7 @@ const URLS_CACHE_ONLY = [
     "/CSS/style.css",
     "/JS/main.jus",
     "/IMG/bquare.jpg",
-    "/index.html",
+    
     "https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
     
 ];
@@ -20,7 +20,7 @@ self.addEventListener("install", function(event) {
             return cache.addAll(URLS_CACHE_ONLY.concat(URLS_OVER_NETWORK_WITH_CACHE_FALLBACK));
         }).catch((err) => {
             console.error(err);
-            return new Promise((resolve, reject) => {
+            return new Promise((_resolve, reject) => {
                 reject('ERROR: ' + err);
             });
         })
