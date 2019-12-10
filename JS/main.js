@@ -5,7 +5,7 @@ if ("serviceWorker" in navigator) {
     } else {
       // Register the service worker
       navigator.serviceWorker
-        .register("sw.js", {
+        .register("pwabuilder-sw.js", {
           scope: "./"
         })
         .then(function (reg) {
