@@ -1,0 +1,21 @@
+{
+	"name" : "Fred Jones",
+	"short_name" : "Fred Jones",
+	"icons" : [
+		{
+			"src": "https://romantic-ride-249daa.netlify.com/IMG/newicons/android-chrome-192x192.png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "https://romantic-ride-249daa.netlify.com/IMG/newicons/android-chrome-512x512.png",
+			"sizes": "512x512"
+		}],
+	"theme_color" : "#ffffff",
+	"background_color" : "#ffffff",
+	"display" : "standalone",
+	"start_url" : "https://romantic-ride-249daa.netlify.com/",
+	"lang" : "",
+	"screenshots" : [],
+	"orientation" : "undefined",
+	"generated" : "undefined"
+}
