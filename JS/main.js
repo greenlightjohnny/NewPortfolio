@@ -1,11 +1,21 @@
  
- 
+ if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js")
+        .then(function (registration) {
+            console.log("Service Worker registered with scope:", 
+                         registration.scope);
+        }).catch(function (err) {
+        console.log("Service worker registration failed:", err);
+    });
+}
+
+
 const ham = document.querySelector('.ham');
 const mIcon = document.querySelector('.mIcon');
 const ul = document.querySelector('ul');
 const nav = document.querySelector('nav');
 const li = document.querySelectorAll('nav li');
-console.log(ham, mIcon, ul, nav, li)
+
 
 ham.addEventListener('click', animateMenu);
 li.forEach(i => {
