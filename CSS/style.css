@@ -490,6 +490,8 @@ header p {
 
 .contact {
   background: #0c0c0c;
+  max-width: 900px;
+  margin: 0 auto;
   color: white;
 }
 
@@ -499,14 +501,10 @@ header p {
 
 @media (min-width: 900px) {
   .contact .flexC {
-    width: 90%;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -514,10 +512,9 @@ header p {
 }
 
 .contact .callMe {
-  width: 90%;
-  min-width: 300px;
-  margin: 0 auto;
-  margin-bottom: 4rem;
+  min-width: 320px;
+  max-width: 460px;
+  margin: 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -552,10 +549,9 @@ header p {
 }
 
 .contact .callMe p {
-  padding-bottom: 2rem;
-  padding-top: 3rem;
-  padding-right: 2.5rem;
   line-height: 1.5rem;
+  padding: 1rem;
+  margin: 0;
 }
 
 @media (min-width: 650px) {
@@ -570,44 +566,41 @@ header p {
 
 @media (min-width: 900px) {
   .contact .callMe {
-    margin: 0;
+    margin: 1rem;
   }
 }
 
-.contact .callme:after {
+.contact .callMe:after {
   content: '';
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 70px;
+  height: 70px;
   position: absolute;
-  top: -5px;
-  right: -5px;
-  border-top: 3px solid blue;
-  border-right: 3px solid blue;
+  top: 0px;
+  left: 0px;
+  border-top: 2px solid turquoise;
+  border-left: 2px solid turquoise;
 }
 
 .contact h2 {
   font-size: 3rem;
-  padding-top: 5rem;
-  padding-bottom: 2rem;
-  color: #fc2232;
+  color: #f4f4f4;
   font-family: 'Source Sans Pro';
   max-width: 900px;
-  margin: 0 auto;
+  margin-bottom: -1.5rem;
   padding-left: 1rem;
 }
 
-@media (min-width: 650px) {
-  .contact h2 {
-    padding-top: 16rem;
-  }
-}
-
 .contact .form {
-  margin: 0 auto;
-  width: 90%;
-  min-width: 300px;
-  margin-bottom: 3rem;
+  min-width: 320px;
+  max-width: 460px;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 @media (min-width: 650px) {
@@ -622,12 +615,17 @@ header p {
 
 @media (min-width: 900px) {
   .contact .form {
-    margin: 0;
+    margin: 1rem;
   }
 }
 
 .contact form div + div {
   margin-top: 1rem;
+}
+
+.contact form {
+  display: block;
+  width: 100%;
 }
 
 .contact label {

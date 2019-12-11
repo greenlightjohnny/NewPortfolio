@@ -638,26 +638,28 @@ header {
 
 .contact {
     background: #0c0c0c;
-    
+    max-width: 900px;
+    margin: 0 auto;
 
 
     .flexC {
         padding-bottom: 3rem;
         @include tabletL {
-        width: 90%;
+        //width: 90%;
         margin: 0 auto;
         display: flex;
        
-        justify-content: center;
+        //justify-content: center;
         flex: 1;
         }
     }
 
     .callMe {
-        width: 90%;
-        min-width: 300px;
-        margin: 0 auto;
-        margin-bottom: 4rem;
+        
+        min-width: 320px;
+        max-width: 460px;
+        //margin-bottom: 4rem;
+        margin: 1rem;
         position: relative;
         overflow: hidden;
 
@@ -688,11 +690,12 @@ header {
         }
 
         p {
-            padding-bottom: 2rem;
-            padding-top: 3rem;
-            padding-right: 2.5rem;
+            //padding-bottom: 2rem;
+            //padding-top: 3rem;
+            //padding-right: 2.5rem;
             line-height: 1.5rem;
-            
+            padding: 1rem;
+            margin: 0;
         }
         @include tabletM {
             
@@ -702,34 +705,34 @@ header {
         }
 
         @include tabletL {
-            margin: 0;
+            margin: 1rem;
         }
     }
 
-    .callme:after {
+    .callMe:after {
         content: '';
         display: block;
-        width: 20px;
-        height: 20px;
+        width: 70px;
+        height: 70px;
         position: absolute;
-        top: -5px;
-        right: -5px;
-        border-top: 3px solid blue;
-        border-right: 3px solid blue;
+        top: 0px;
+        left: 0px;
+        border-top: 2px solid turquoise;
+        border-left: 2px solid turquoise;
     }
     
     h2 {
         //text-align: center;
         font-size: 3rem;
-        padding-top: 5rem;
-        padding-bottom: 2rem;
-        color: #fc2232;
+        //padding-top: 5rem;
+        //padding-bottom: 2rem;
+        color: #f4f4f4;
         font-family: 'Source Sans Pro';
         max-width: 900px;
-        margin: 0 auto;
+        margin-bottom: -1.5rem;
         padding-left: 1rem;
         @include tabletM {
-            padding-top: 16rem;
+            //padding-top: 16rem;
         }
         
     }
@@ -739,12 +742,13 @@ header {
 
 
     .form {
-        margin: 0 auto;
-        width: 90%;
-        min-width: 300px;
-    
-        margin-bottom: 3rem;
-
+        
+        //width: 90%;
+        min-width: 320px;
+        max-width: 460px;
+        margin: 1rem;
+        display: flex;
+        flex: 1;
         @include tabletM {
             
             max-width: 450px;
@@ -753,7 +757,7 @@ header {
         }
 
         @include tabletL {
-            margin: 0;
+            margin: 1rem;
         }
     }
 
@@ -761,6 +765,10 @@ header {
         margin-top: 1rem;
     }
 
+    form {
+        display: block;
+        width: 100%;
+    }
     
 
     label {
