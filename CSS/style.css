@@ -573,8 +573,8 @@ header p {
 .contact .callMe:after {
   content: '';
   display: block;
-  width: 70px;
-  height: 70px;
+  width: 200px;
+  height: 200px;
   position: absolute;
   top: 0px;
   left: 0px;
