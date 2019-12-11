@@ -574,6 +574,18 @@ header p {
   }
 }
 
+.contact .callme:after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border-top: 3px solid blue;
+  border-right: 3px solid blue;
+}
+
 .contact h2 {
   font-size: 3rem;
   padding-top: 5rem;
@@ -669,5 +681,137 @@ header p {
 .contact button:hover {
   cursor: pointer;
   background-color: #ef2e5d;
+}
+
+.aboutMe {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 7rem;
+}
+
+.aboutMe .myTitle {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.aboutMe .myTitle h2 {
+  color: turquoise;
+  margin-left: 1rem;
+  font-size: 3rem;
+  margin-bottom: -.6rem;
+  z-index: 4;
+  font-family: 'Source Sans Pro';
+}
+
+.aboutMe .flex2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .aboutMe .flex2 {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}
+
+.aboutMe .flex2 > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 320px;
+  max-width: 460px;
+  min-height: 320px;
+  max-height: 460px;
+  background-color: transparent;
+  margin: 0 1rem 2rem 1rem;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .aboutMe .flex2 > * {
+    min-width: 400px;
+  }
+}
+
+.aboutMe img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  -webkit-transition: -webkit-transform ease-in-out .5s, -webkit-filter ease-in-out 1s;
+  transition: -webkit-transform ease-in-out .5s, -webkit-filter ease-in-out 1s;
+  transition: transform ease-in-out .5s, filter ease-in-out 1s;
+  transition: transform ease-in-out .5s, filter ease-in-out 1s, -webkit-transform ease-in-out .5s, -webkit-filter ease-in-out 1s;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.aboutMe img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.aboutMe .talking {
+  color: #f4f4f4;
+}
+
+.aboutMe .aboutImage {
+  -webkit-filter: hue-rotate(250deg);
+          filter: hue-rotate(250deg);
+  -webkit-transition: ease-in-out all .5s;
+  transition: ease-in-out all .5s;
+}
+
+.aboutMe .aboutImage:hover {
+  -webkit-filter: hue-rotate(0deg);
+          filter: hue-rotate(0deg);
+}
+
+.aboutMe .talking {
+  position: relative;
+}
+
+.aboutMe .talking p {
+  padding: 1rem;
+}
+
+.aboutMe .talking .padThis {
+  padding-top: 2rem;
+}
+
+.aboutMe .talking:after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-top: 2px solid turquoise;
+  border-right: 2px solid turquoise;
+}
+
+.aboutMe .talking::before {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-bottom: 2px solid turquoise;
+  border-left: 2px solid turquoise;
 }
 /*# sourceMappingURL=style.css.map */

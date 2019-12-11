@@ -705,6 +705,18 @@ header {
             margin: 0;
         }
     }
+
+    .callme:after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        border-top: 3px solid blue;
+        border-right: 3px solid blue;
+    }
     
     h2 {
         //text-align: center;
@@ -813,3 +825,131 @@ header {
   
     
 }
+
+
+//////////////////////////////////// ABOUT ///////////////
+
+.aboutMe {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 7rem;
+
+    .myTitle {
+        max-width: 900px;
+        margin: 0 auto;
+    
+        h2 {
+            color: turquoise;
+            margin-left: 1rem;
+            font-size: 3rem;
+            margin-bottom: -.6rem;
+            z-index: 4;
+            font-family: 'Source Sans Pro';
+        }
+    }
+
+    .flex2 {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        //overflow: hidden;
+
+      
+
+        @include tabletL {
+            margin: 0 auto;
+            max-width: 900px;
+        }
+    }
+
+    .flex2 > * {
+        display: flex;
+        flex: 1;
+        min-width: 320px;
+        max-width: 460px;
+        min-height: 320px;
+        max-height: 460px;
+        background-color: transparent;
+        //border: 1px solid red;
+        margin: 0 1rem 2rem 1rem;
+        overflow: hidden;
+        //position: relative;
+        @include tabletL {
+            min-width: 400px;
+        }
+    }
+
+    
+
+    
+    img {
+        object-fit: contain;
+        max-width: 100%;
+        transition: transform ease-in-out .5s, filter ease-in-out 1s;
+        min-width: 100%;
+        overflow: hidden;
+        //filter: sepia(1);
+    }
+
+    img:hover {
+        transform: scale(1.1); 
+    }
+
+    .talking {
+        color: #f4f4f4;
+    }
+
+    .aboutImage {
+        filter: hue-rotate(250deg);
+        
+        transition: ease-in-out all .5s;
+
+        &:hover {
+            filter: hue-rotate(0deg);
+        }        
+    }
+
+
+    .talking {
+        position: relative;
+
+        p {
+            padding: 1rem;
+        }
+
+        .padThis {
+            padding-top: 2rem;
+        }
+    }
+
+    .talking:after {
+        
+            content: '';
+            display: block;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            border-top: 2px solid turquoise;
+            border-right: 2px solid turquoise;
+        
+    }
+
+
+    .talking::before {
+        
+        content: '';
+        display: block;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        border-bottom: 2px solid turquoise;
+        border-left: 2px solid turquoise;
+    
+}
+}
+
