@@ -316,17 +316,19 @@ nav.expand {
 }
 
 header .intro {
-  max-width: 320px;
+  max-width: 900px;
   margin: 0 auto;
-  margin-top: 40%;
+  padding-top: 200px;
 }
 
 @media (min-width: 900px) {
   header .intro {
-    margin-left: 10%;
-    margin-top: 20%;
-    max-width: 400px;
+    max-width: 900px;
   }
+}
+
+header .intro .introsec {
+  margin: 1rem;
 }
 
 header h1 {
@@ -356,6 +358,11 @@ header p {
   font-size: 1.1rem;
   font-weight: 400;
   margin-top: 0;
+  max-width: 310px;
+}
+
+.projects {
+  margin-top: -7rem;
 }
 
 .projects .flex {
@@ -390,7 +397,7 @@ header p {
   max-width: 460px;
   min-height: 320px;
   max-height: 460px;
-  background-color: #f4f4f4;
+  background-color: transparent;
   margin: 0 1rem 2rem 1rem;
   overflow: hidden;
 }
@@ -552,23 +559,6 @@ header p {
 @media (min-width: 650px) {
   .contact .callMe h3 {
     text-align: left;
-  }
-}
-
-.contact .callMe h3:after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  height: 2px;
-  left: 10%;
-  bottom: -10px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #ef2e5d), color-stop(80%, transparent));
-  background: linear-gradient(to right, #ef2e5d 20%, transparent 80%);
-}
-
-@media (min-width: 650px) {
-  .contact .callMe h3:after {
-    left: 0px;
   }
 }
 
@@ -807,6 +797,7 @@ header p {
 
 .aboutMe .talking p {
   padding: 1rem;
+  line-height: 1.5rem;
 }
 
 .aboutMe .talking .padThis {

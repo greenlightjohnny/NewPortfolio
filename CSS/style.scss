@@ -448,6 +448,7 @@ nav.expand {
     height: 100vh;
     transition: height 400ms linear;
     background: #0c0c0c;
+    
 }
 
 
@@ -455,14 +456,18 @@ nav.expand {
 header {
 
     .intro {
-        max-width: 320px;
+        max-width: 900px;
         margin: 0 auto;
-        margin-top: 40%;
+        padding-top: 200px;
 
         @include tabletL {
-            margin-left: 10%;
-            margin-top: 20%;
-            max-width: 400px;
+            //margin-left: 10%;
+            //margin-top: 20%;
+            max-width: 900px;
+        }
+
+        .introsec {
+            margin: 1rem;
         }
     }
 
@@ -482,6 +487,7 @@ header {
         width: 300px;
         display: inline-block;
         font-size: 3rem;
+        
        
 
         @include tabletL {
@@ -496,6 +502,7 @@ header {
         font-size: 1.1rem;
         font-weight: 400;
         margin-top: 0;
+        max-width: 310px;
     }
 }
 
@@ -503,7 +510,7 @@ header {
 /////////////////////////////////// PROJECTS //////////////////////////////
 .projects {
     //height: 200vh;
-    
+    margin-top: -7rem;
 
 
     .flex {
@@ -526,7 +533,7 @@ header {
         max-width: 460px;
         min-height: 320px;
         max-height: 460px;
-        background-color: #f4f4f4;
+        background-color: transparent;
         //border: 1px solid red;
         margin: 0 1rem 2rem 1rem;
         overflow: hidden;
@@ -690,20 +697,20 @@ header {
            
         }
 
-        h3:after {
-            content: "";
-            width: 100%;
+        // h3:after {
+        //     content: "";
+        //     width: 100%;
             
-            position: absolute;
-            height: 2px;
-            left: 10%;
-            bottom: -10px;
-            background: linear-gradient(to right, $pinkish 20%, transparent 80%);
+        //     position: absolute;
+        //     height: 2px;
+        //     left: 10%;
+        //     bottom: -10px;
+        //     background: linear-gradient(to right, $pinkish 20%, transparent 80%);
 
-            @include tabletM {
-                left: 0px;
-            }
-        }
+        //     @include tabletM {
+        //         left: 0px;
+        //     }
+        // }
 
         p {
             //padding-bottom: 2rem;
@@ -942,6 +949,7 @@ header {
 
         p {
             padding: 1rem;
+            line-height: 1.5rem;
         }
 
         .padThis {
