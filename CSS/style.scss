@@ -215,7 +215,7 @@ nav {
     justify-content: space-between;
     transition: all ease-in-out 1s;
     transition: height .4s linear;
-    transition: top .7s;
+    transition: top .4s;
 
 
     @include tabletL {
@@ -654,7 +654,7 @@ header {
 
 .contact {
     background: #0c0c0c;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 
 
@@ -861,7 +861,7 @@ header {
     margin-top: 7rem;
 
     .myTitle {
-        max-width: 900px;
+        max-width: 1000px;
         margin: 0 auto;
     
         h2 {
@@ -893,9 +893,9 @@ header {
         display: flex;
         flex: 1;
         min-width: 320px;
-        max-width: 460px;
+        max-width: 480px;
         min-height: 320px;
-        max-height: 460px;
+        max-height: 480px;
         background-color: transparent;
         //border: 1px solid red;
         margin: 0 1rem 2rem 1rem;

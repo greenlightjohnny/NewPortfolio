@@ -51,7 +51,7 @@ function hideNavOnScroll() {
 
 }
 
-window.addEventListener('scroll', hideNavOnScroll)
+//window.addEventListener('scroll', hideNavOnScroll)
 
 //////////////////SLIDE ON SCROLL/////////////////////////
 const tiles = document.querySelectorAll('.one');
@@ -106,3 +106,5 @@ function debounce(func, wait = 20, immediate=true) {
   }
 
 window.addEventListener('scroll', debounce(slideIn));
+window.addEventListener('scroll', debounce(hideNavOnScroll));
+

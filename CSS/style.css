@@ -102,8 +102,8 @@ nav {
   transition: all ease-in-out 1s;
   -webkit-transition: height .4s linear;
   transition: height .4s linear;
-  -webkit-transition: top .7s;
-  transition: top .7s;
+  -webkit-transition: top .4s;
+  transition: top .4s;
 }
 
 nav .logo {
@@ -508,7 +508,7 @@ header p {
 
 .contact {
   background: #0c0c0c;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   color: white;
 }
@@ -706,7 +706,7 @@ header p {
 }
 
 .aboutMe .myTitle {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -748,9 +748,9 @@ header p {
       -ms-flex: 1;
           flex: 1;
   min-width: 320px;
-  max-width: 460px;
+  max-width: 480px;
   min-height: 320px;
-  max-height: 460px;
+  max-height: 480px;
   background-color: transparent;
   margin: 0 1rem 2rem 1rem;
   overflow: hidden;
