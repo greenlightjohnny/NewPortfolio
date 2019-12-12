@@ -149,7 +149,7 @@ header {
     opacity: 1;
     transition: all ease-in-out 1s;
     transition: height 700ms linear;
-    height: 50px;
+    height: 40px;
     //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
     
@@ -181,7 +181,7 @@ header {
     opacity: 1;
     transition: all ease-in-out 1s;
     transition: height 700ms linear;
-    height: 50px;
+    height: 40px;
     //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
     
@@ -201,7 +201,7 @@ header {
 nav {
     opacity: 1;
     //pointer-events: none;
-    height: 4rem;
+    height: 40px;
     overflow-y: hidden;
     position: fixed;
     top: 0;
@@ -219,7 +219,7 @@ nav {
 
 
     @include tabletL {
-        
+        height: 4rem;
     }
 
     
@@ -242,8 +242,8 @@ nav {
         display: inline-block;
         margin-right: 5%;
         margin-top: 8px;
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
 
         @include tabletL {
             display: none;
@@ -254,7 +254,7 @@ nav {
     .mIcon,
     .mIcon:after,
     .mIcon:before {
-        height: 5px;
+        height: 4px;
         width: 100%;
         border-radius: 1px;
 
@@ -262,7 +262,7 @@ nav {
 
     .mIcon {
         position: relative;
-        transform: translateY(20px);
+        transform: translateY(10px);
         background: $ham;
         transition: all 0ms 300ms;
 
@@ -275,7 +275,7 @@ nav {
         content: "";
         position: absolute;
         left: 0;
-        bottom: 15px;
+        bottom: 10px;
         background: $ham;
         transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 
@@ -285,7 +285,7 @@ nav {
         content: "";
         position: absolute;
         left: 0;
-        top: 15px;
+        top: 10px;
         background: $ham;
         transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 
