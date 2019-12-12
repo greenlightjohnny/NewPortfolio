@@ -36,6 +36,14 @@ header {
   height: 50px;
 }
 
+.navTop {
+  top: 0;
+}
+
+.navScroll {
+  top: -4rem;
+}
+
 .navHeight {
   height: 100vh;
 }
@@ -82,7 +90,7 @@ nav {
   top: 0;
   z-index: 3;
   width: 100%;
-  background: transparent;
+  background: #0c0c0c;
   font-size: 1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,6 +102,8 @@ nav {
   transition: all ease-in-out 1s;
   -webkit-transition: height .4s linear;
   transition: height .4s linear;
+  -webkit-transition: top .7s;
+  transition: top .7s;
 }
 
 nav .logo {
@@ -282,6 +292,14 @@ nav li a:before {
   background-color: turquoise;
   -webkit-transition: all 0.6s cubic-bezier(0.66, 0.19, 0.19, 1);
   transition: all 0.6s cubic-bezier(0.66, 0.19, 0.19, 1);
+}
+
+.navTop {
+  top: 0;
+}
+
+.navScroll {
+  top: -4rem;
 }
 
 nav.expand {
@@ -682,7 +700,7 @@ header p {
 }
 
 .aboutMe {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-top: 7rem;
 }
@@ -718,7 +736,7 @@ header p {
 @media (min-width: 900px) {
   .aboutMe .flex2 {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1000px;
   }
 }
 

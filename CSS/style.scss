@@ -155,6 +155,13 @@ header {
     
 }
 
+.navTop {
+    top: 0;
+}
+.navScroll {
+    top: -4rem;
+}
+
 .navHeight {
     height: 100vh;
 }
@@ -202,12 +209,13 @@ nav {
     width: 100%;
     //background: rgba(255, 255, 255, .9);
     //background: #0c0c0c;
-    background: transparent;
+    background: #0c0c0c;
     font-size: 1.3rem;
     display: flex;
     justify-content: space-between;
     transition: all ease-in-out 1s;
     transition: height .4s linear;
+    transition: top .7s;
 
 
     @include tabletL {
@@ -427,6 +435,14 @@ nav {
         
     }
 }
+
+.navTop {
+    top: 0;
+}
+.navScroll {
+    top: -4rem;
+}
+
 
 nav.expand {
     height: 100vh;
@@ -840,7 +856,7 @@ header {
 //////////////////////////////////// ABOUT ///////////////
 
 .aboutMe {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     margin-top: 7rem;
 
@@ -869,7 +885,7 @@ header {
 
         @include tabletL {
             margin: 0 auto;
-            max-width: 900px;
+            max-width: 1000px;
         }
     }
 

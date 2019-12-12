@@ -35,6 +35,24 @@ function animateMenu() {
 
 }
 
+/////////////Function Hide Nav on Scroll//////////////////
+    let prevScrollPos = window.pageYOffset;
+function hideNavOnScroll() {
+    let currentScrollPos = window.pageYOffset;
+    if(prevScrollPos > currentScrollPos) {
+        nav.classList.add('navTop');
+        nav.classList.remove('navScroll')
+    } else {
+        nav.classList.add('navScroll')
+        nav.classList.remove('navTop')
+    }
+
+    prevScrollPos = currentScrollPos;
+
+}
+
+window.addEventListener('scroll', hideNavOnScroll)
+
 //////////////////SLIDE ON SCROLL/////////////////////////
 const tiles = document.querySelectorAll('.one');
 
