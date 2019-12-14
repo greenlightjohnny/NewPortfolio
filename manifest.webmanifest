@@ -3,17 +3,17 @@
 	"short_name" : "Fred Jones",
 	"icons" : [
 		{
-			"src": "https://romantic-ride-249daa.netlify.com/IMG/newicons/android-chrome-192x192.png",
+			"src": "https://www.fredjones.dev//IMG/newicons/android-chrome-192x192.png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "https://romantic-ride-249daa.netlify.com/IMG/newicons/android-chrome-512x512.png",
+			"src": "https://www.fredjones.dev//IMG/newicons/android-chrome-512x512.png",
 			"sizes": "512x512"
 		}],
 	"theme_color" : "#ffffff",
 	"background_color" : "#ffffff",
 	"display" : "standalone",
-	"start_url" : "https://romantic-ride-249daa.netlify.com/",
+	"start_url" : "https://www.fredjones.dev/",
 	"lang" : "",
 	"screenshots" : [],
 	"orientation" : "undefined",

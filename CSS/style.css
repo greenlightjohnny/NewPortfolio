@@ -3,6 +3,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -121,6 +122,11 @@ nav .logo {
   padding-top: 10px;
   font-size: 2rem;
   vertical-align: center;
+}
+
+nav .logo a {
+  text-decoration: none;
+  color: #f4f4f4;
 }
 
 nav .ham {
@@ -784,6 +790,7 @@ header p {
   border-top: 1px solid #8048a5;
   position: relative;
   overflow: visible;
+  max-height: 650px;
 }
 
 .aboutMe .skills .skillTitle {
