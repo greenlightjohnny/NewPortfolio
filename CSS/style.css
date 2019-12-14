@@ -707,7 +707,7 @@ header p {
 }
 
 .aboutMe .myTitle h2 {
-  color: turquoise;
+  color: #8048a5;
   margin-left: 1rem;
   font-size: 3rem;
   margin-bottom: -.6rem;
@@ -759,8 +759,8 @@ header p {
 }
 
 .aboutMe img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 100%;
   -webkit-transition: -webkit-transform ease-in-out .5s, -webkit-filter ease-in-out 1s;
   transition: -webkit-transform ease-in-out .5s, -webkit-filter ease-in-out 1s;
@@ -768,6 +768,7 @@ header p {
   transition: transform ease-in-out .5s, filter ease-in-out 1s, -webkit-transform ease-in-out .5s, -webkit-filter ease-in-out 1s;
   min-width: 100%;
   overflow: hidden;
+  padding: 0;
 }
 
 .aboutMe img:hover {
@@ -780,13 +781,13 @@ header p {
 }
 
 .aboutMe .skills {
-  border-top: 1px solid turquoise;
+  border-top: 1px solid #8048a5;
   position: relative;
   overflow: visible;
 }
 
 .aboutMe .skills .skillTitle {
-  color: #ef2e5d;
+  color: #d3a5f1;
   font-size: 1.3rem;
 }
 
@@ -823,7 +824,7 @@ header p {
   position: absolute;
   top: 0px;
   right: 0px;
-  border-right: 1px solid turquoise;
+  border-right: 1px solid #8048a5;
 }
 
 .aboutMe .skills::before {
@@ -834,8 +835,8 @@ header p {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  border-bottom: 1px solid turquoise;
-  border-left: 1px solid turquoise;
+  border-bottom: 1px solid #8048a5;
+  border-left: 1px solid #8048a5;
 }
 
 .aboutMe .aboutImage {
@@ -853,7 +854,8 @@ header p {
 .aboutMe .talking {
   position: relative;
   overflow: visible;
-  border-top: 1px solid turquoise;
+  border-top: 1px solid #8048a5;
+  max-height: 650px;
 }
 
 .aboutMe .talking p {
@@ -863,6 +865,7 @@ header p {
 
 .aboutMe .talking .padThis {
   padding-top: 2rem;
+  display: block;
 }
 
 .aboutMe .talking h3 {
@@ -887,8 +890,7 @@ header p {
   position: absolute;
   top: 0px;
   right: 0px;
-  border-top: 2px solid turquoise;
-  border-right: 2px solid turquoise;
+  border-right: 1px solid #8048a5;
 }
 
 .aboutMe .talking::before {
@@ -899,7 +901,7 @@ header p {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  border-bottom: 2px solid turquoise;
-  border-left: 2px solid turquoise;
+  border-bottom: 1px solid #8048a5;
+  border-left: 1px solid #8048a5;
 }
 /*# sourceMappingURL=style.css.map */

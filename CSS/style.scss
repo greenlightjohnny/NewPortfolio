@@ -872,7 +872,7 @@ header {
         margin: 0 auto;
     
         h2 {
-            color: turquoise;
+            color: rgb(128, 72, 165);
             margin-left: 1rem;
             font-size: 3rem;
             margin-bottom: -.6rem;
@@ -917,11 +917,12 @@ header {
 
     
     img {
-        object-fit: contain;
+        object-fit: cover;
         max-width: 100%;
         transition: transform ease-in-out .5s, filter ease-in-out 1s;
         min-width: 100%;
         overflow: hidden;
+        padding: 0;
         //filter: sepia(1);
     }
 
@@ -934,11 +935,11 @@ header {
     }
 
     .skills {
-        border-top: 1px solid turquoise;
+        border-top: 1px solid rgb(128, 72, 165);
         position: relative;
         overflow: visible;
         .skillTitle {
-            color: #ef2e5d;
+            color: rgb(211, 165, 241);
             font-size: 1.3rem;
         }
         ul {
@@ -983,7 +984,7 @@ header {
         top: 0px;
         right: 0px;
         //border-top: 1px solid turquoise;
-        border-right: 1px solid turquoise;
+        border-right: 1px solid rgb(128, 72, 165);
     
 }
 
@@ -997,8 +998,8 @@ header {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    border-bottom: 1px solid turquoise;
-    border-left: 1px solid turquoise;
+    border-bottom: 1px solid rgb(128, 72, 165);
+    border-left: 1px solid rgb(128, 72, 165);
 
 }
 
@@ -1018,7 +1019,8 @@ header {
     .talking {
         position: relative;
         overflow: visible;
-        border-top: 1px solid turquoise;
+        border-top: 1px solid rgb(128, 72, 165);
+        max-height: 650px;
 
         p {
             padding: 1rem;
@@ -1027,6 +1029,7 @@ header {
 
         .padThis {
             padding-top: 2rem;
+            display: block;
         }
 
         h3 {
@@ -1058,8 +1061,8 @@ header {
             position: absolute;
             top: 0px;
             right: 0px;
-            border-top: 2px solid turquoise;
-            border-right: 2px solid turquoise;
+            //border-top: 1px solid turquoise;
+            border-right: 1px solid rgb(128, 72, 165);
         
     }
 
@@ -1073,8 +1076,8 @@ header {
         position: absolute;
         bottom: 0px;
         left: 0px;
-        border-bottom: 2px solid turquoise;
-        border-left: 2px solid turquoise;
+        border-bottom: 1px solid rgb(128, 72, 165);
+        border-left: 1px solid rgb(128, 72, 165);
     
 }
 }
