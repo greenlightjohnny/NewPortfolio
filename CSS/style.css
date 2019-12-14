@@ -775,8 +775,67 @@ header p {
           transform: scale(1.1);
 }
 
-.aboutMe .talking {
+.aboutMe .talking, .aboutMe .skills {
+  color: #b9b3b3;
+}
+
+.aboutMe .skills {
+  border-top: 1px solid turquoise;
+  position: relative;
+  overflow: visible;
+}
+
+.aboutMe .skills .skillTitle {
+  color: #ef2e5d;
+  font-size: 1.3rem;
+}
+
+.aboutMe .skills ul {
+  display: block;
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.aboutMe .skills li {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+}
+
+.aboutMe .skills h3 {
+  display: block;
+  position: absolute;
+  left: 2rem;
+  top: -2.7rem;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 3;
+  background: #0c0c0c;
+  font-family: 'Source Sans Pro';
   color: #f4f4f4;
+}
+
+.aboutMe .skills:after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-right: 1px solid turquoise;
+}
+
+.aboutMe .skills::before {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-bottom: 1px solid turquoise;
+  border-left: 1px solid turquoise;
 }
 
 .aboutMe .aboutImage {
@@ -793,6 +852,8 @@ header p {
 
 .aboutMe .talking {
   position: relative;
+  overflow: visible;
+  border-top: 1px solid turquoise;
 }
 
 .aboutMe .talking p {
@@ -802,6 +863,20 @@ header p {
 
 .aboutMe .talking .padThis {
   padding-top: 2rem;
+}
+
+.aboutMe .talking h3 {
+  display: block;
+  position: absolute;
+  left: 2rem;
+  top: -2.7rem;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 3;
+  background: #0c0c0c;
+  font-family: 'Source Sans Pro';
+  color: #f4f4f4;
 }
 
 .aboutMe .talking:after {

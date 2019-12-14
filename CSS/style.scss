@@ -448,7 +448,7 @@ nav.expand {
     height: 100vh;
     transition: height 400ms linear;
     background: #0c0c0c;
-    
+
 }
 
 
@@ -929,9 +929,80 @@ header {
         transform: scale(1.1); 
     }
 
-    .talking {
-        color: #f4f4f4;
+    .talking, .skills {
+        color: #b9b3b3;
     }
+
+    .skills {
+        border-top: 1px solid turquoise;
+        position: relative;
+        overflow: visible;
+        .skillTitle {
+            color: #ef2e5d;
+            font-size: 1.3rem;
+        }
+        ul {
+            display: block;
+            list-style-type: none;
+            padding: 1rem;
+            //padding-left: 2.5rem;
+        }
+
+        li {
+            margin-top: 1rem;
+            line-height: 1.5rem;
+        }
+
+        h3 {
+            display: block;
+            position: absolute;
+            left: 2rem;
+            top: -2.7rem;
+            font-size: 1.5rem;
+            padding-left: 10px;
+            padding-right: 10px;
+            z-index: 3;
+            background:  #0c0c0c;
+            // top: 2.5rem;
+            // left: -2.9rem;
+            // margin: 0;
+            // font-size: 2.5rem;
+            // transform: rotate(90deg);
+            font-family: 'Source Sans Pro';
+            color: #f4f4f4;
+        }
+    }
+
+    .skills:after {
+        
+        content: '';
+        display: block;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        //border-top: 1px solid turquoise;
+        border-right: 1px solid turquoise;
+    
+}
+
+
+.skills::before {
+    
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-bottom: 1px solid turquoise;
+    border-left: 1px solid turquoise;
+
+}
+
+    
 
     .aboutImage {
         filter: hue-rotate(250deg);
@@ -946,6 +1017,8 @@ header {
 
     .talking {
         position: relative;
+        overflow: visible;
+        border-top: 1px solid turquoise;
 
         p {
             padding: 1rem;
@@ -954,6 +1027,25 @@ header {
 
         .padThis {
             padding-top: 2rem;
+        }
+
+        h3 {
+            display: block;
+            position: absolute;
+            left: 2rem;
+            top: -2.7rem;
+            font-size: 1.5rem;
+            padding-left: 10px;
+            padding-right: 10px;
+            z-index: 3;
+            background:  #0c0c0c;
+            // top: 2.5rem;
+            // left: -2.9rem;
+            // margin: 0;
+            // font-size: 2.5rem;
+            // transform: rotate(90deg);
+            font-family: 'Source Sans Pro';
+            color: #f4f4f4;
         }
     }
 
