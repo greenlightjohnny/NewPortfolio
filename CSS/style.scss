@@ -523,7 +523,35 @@ header {
 .projects {
     //height: 200vh;
     //margin-top: -7rem;
+    max-width: 900px;
+    margin: 0 auto;
 
+    .hiddenFlex {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        h2 {
+            //position: absolute;
+            font-size: 3rem;
+            font-family: "Source Sans Pro";
+            margin-bottom: -11px;
+            color: rgb(211, 165, 241);
+            //z-index: 4;
+        }
+        div {
+            margin-bottom: 0;
+        }
+    }
+
+    .hiddenFlex > * {
+        max-width: 460px;
+        min-width: 320px;
+        margin: 0 1rem 2rem 1rem;
+        flex: 1;
+
+    }
 
     .flex {
         display: flex;
@@ -555,6 +583,8 @@ header {
         }
     }
 
+    
+
     img {
         object-fit: contain;
         max-width: 100%;
@@ -572,6 +602,14 @@ header {
     .one {
         position: relative;
 
+        h3 {
+            position: absolute;
+            color: #fff;
+            font-size: 3rem;
+            top: -4rem;
+            z-index: 3;
+        }
+
         h2 {
             position: absolute;
             bottom: 0;
@@ -579,6 +617,19 @@ header {
             color: #f4f4f4;
             margin-left: 2rem;
         }
+
+        // .pro {
+        //     //display: block;
+        //     position: absolute;
+        //     color: #fc2232;
+        //     top: -5rem;
+        //     margin: 0;
+        //     left: 0;
+        //     z-index: 4;
+        //     font-family: 'Source Sans Pro';
+        //     font-size: 3rem;
+        // }
+    
     }
 
     .imageOne {
@@ -634,21 +685,29 @@ header {
     // .one:before:hover ~ img:hover {
     //     transform: scale(1.1);
     // }
+
+
+      // .pro {
+        //     //display: block;
+        //     position: absolute;
+        //     color: #fc2232;
+        //     top: -5rem;
+        //     margin: 0;
+        //     left: 0;
+        //     z-index: 4;
+        //     font-family: 'Source Sans Pro';
+        //     font-size: 3rem;
+        // }
 }
 
-.pro {
-    max-width: 900px;
-    margin: 0 auto;
 
-    h2 {
-        color: #fc2232;
-        margin-left: 1rem;
-        font-size: 3rem;
-        margin-bottom: -.6rem;
-        z-index: 4;
-        font-family: 'Source Sans Pro';
-    }
-}
+
+
+
+
+    
+
+   
 
 /////////// ANIMATIONS ///////////////
 
@@ -891,7 +950,7 @@ header {
 
     .myTitle {
         max-width: 1000px;
-        margin: 0 auto;
+        margin: 0 auto 1rem 0;
     
         h2 {
             color: rgb(211, 165, 241);
@@ -900,7 +959,34 @@ header {
             margin-bottom: -.6rem;
             z-index: 4;
             font-family: 'Source Sans Pro';
+            max-width: 480px;
+            margin: 0 auto;
         }
+    }
+
+    .hiddenFlex {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        h2 {
+            color: #f4f4f4;
+            font-size: 3rem;
+            font-family: "Source Sans Pro";
+            margin-bottom: -11px;
+            color: rgb(211, 165, 241);
+        }
+        div {
+            margin-bottom: 0;
+        }
+    }
+
+    .hiddenFlex > * {
+        max-width: 480px;
+        min-width: 320px;
+        margin: 0 1rem 2rem 1rem;
+        flex: 1;
+
     }
 
     .flex2 {
