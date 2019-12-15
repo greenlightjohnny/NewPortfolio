@@ -877,17 +877,27 @@ header {
     
 
     label {
-        display: inline-block;
+        display: block;
         text-align: left;
-        width: 100%;
+        width: fit-content;
         font-size: 1.1rem;
-        margin-bottom: .3rem;
+        margin-bottom: -10px;
+        margin-left: 2rem;
+        padding: 0 1rem 0 1rem;
+        background: #0c0c0c;
+        z-index: 5;
+        position: absolute;
+        top: -10px;
         
     }
 
     textarea {
         vertical-align: top;
         border-bottom: 1px solid turquoise;
+    }
+
+    .slideUp {
+        position: relative;
     }
 
     input, textarea {
@@ -907,6 +917,8 @@ header {
 
     input {
         border: 1px solid turquoise;
+        height: 4rem;
+        margin-bottom: 2rem;
     }
 
     input:focus, textarea:focus {

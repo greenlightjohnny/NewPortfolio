@@ -658,16 +658,28 @@ header p {
 }
 
 .contact label {
-  display: inline-block;
+  display: block;
   text-align: left;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 1.1rem;
-  margin-bottom: .3rem;
+  margin-bottom: -10px;
+  margin-left: 2rem;
+  padding: 0 1rem 0 1rem;
+  background: #0c0c0c;
+  z-index: 5;
+  position: absolute;
+  top: -10px;
 }
 
 .contact textarea {
   vertical-align: top;
   border-bottom: 1px solid turquoise;
+}
+
+.contact .slideUp {
+  position: relative;
 }
 
 .contact input, .contact textarea {
@@ -683,6 +695,8 @@ header p {
 
 .contact input {
   border: 1px solid turquoise;
+  height: 4rem;
+  margin-bottom: 2rem;
 }
 
 .contact input:focus, .contact textarea:focus {
