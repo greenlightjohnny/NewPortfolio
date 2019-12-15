@@ -1078,6 +1078,7 @@ header {
 
     .skills {
         border-top: 1px solid rgb(128, 72, 165);
+        border-bottom: 1px solid rgb(128, 72, 165);
         position: relative;
         overflow: visible;
         max-height: 650px;
@@ -1122,7 +1123,7 @@ header {
         content: '';
         display: block;
         width: 70px;
-        height: 70px;
+        height: 200px;
         position: absolute;
         top: 0px;
         right: 0px;
@@ -1137,11 +1138,11 @@ header {
     content: '';
     display: block;
     width: 70px;
-    height: 70px;
+    height: 200px;
     position: absolute;
     bottom: 0px;
     left: 0px;
-    border-bottom: 1px solid rgb(128, 72, 165);
+    //border-bottom: 1px solid rgb(128, 72, 165);
     border-left: 1px solid rgb(128, 72, 165);
 
 }
@@ -1229,3 +1230,12 @@ header {
 }
 }
 
+footer {
+
+    p {
+        text-align: center;
+        color: #b9b3b3;
+        font-family: "Source Sans Pro";
+        padding-top: 2rem;
+    }
+}

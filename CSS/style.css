@@ -867,6 +867,7 @@ header p {
 
 .aboutMe .skills {
   border-top: 1px solid #8048a5;
+  border-bottom: 1px solid #8048a5;
   position: relative;
   overflow: visible;
   max-height: 650px;
@@ -906,7 +907,7 @@ header p {
   content: '';
   display: block;
   width: 70px;
-  height: 70px;
+  height: 200px;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -917,11 +918,10 @@ header p {
   content: '';
   display: block;
   width: 70px;
-  height: 70px;
+  height: 200px;
   position: absolute;
   bottom: 0px;
   left: 0px;
-  border-bottom: 1px solid #8048a5;
   border-left: 1px solid #8048a5;
 }
 
@@ -994,5 +994,12 @@ header p {
   left: 0px;
   border-bottom: 1px solid #8048a5;
   border-left: 1px solid #8048a5;
+}
+
+footer p {
+  text-align: center;
+  color: #b9b3b3;
+  font-family: "Source Sans Pro";
+  padding-top: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
