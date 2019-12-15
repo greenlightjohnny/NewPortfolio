@@ -886,7 +886,7 @@ header {
         margin-left: 2rem;
         padding: 0 1rem 0 1rem;
         background: #0c0c0c;
-        z-index: 5;
+        z-index: 2;
         position: absolute;
         top: -12px;
         color: #ee6857;
@@ -909,27 +909,22 @@ header {
        
         font-family: 'Source Sans Pro';
         width: 100%;
-        //background: transparent;
-        background-color: #0c0c0c !important;
+        background: transparent;
+        
         border: 1px solid #ff8906;
         border-radius: 2px;
         font-size: 1.1rem;
         color: #fff !important;
         padding-left: 1rem;
         line-height: 2rem;
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0), inset 0 0 0 100px #0c0c0c;
+        //box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0), inset 0 0 0 100px #0c0c0c;
         
         //border: 1px solid $bluish;
     }
 
-//     input:-webkit-autofill,
-// input:-webkit-autofill:hover,
-// input:-webkit-autofill:focus,
-// input:-webkit-autofill:active {
-//         background-color: #0c0c0c !important;
-//         background-image: none !important;
-//         color: #f4f4f4 !important;
-//     }
+   
+ 
+    
     textarea {
         padding-top: 1rem;
     }
@@ -974,7 +969,11 @@ header {
     
 }
 
+#mail:-webkit-autofill, #id:-webkit-autofill {
+    background-color: #0c0c0c !important;
+}
 
+//-webkit-text-fill-color: #f4f4f4 !important;
 //////////////////////////////////// ABOUT ///////////////
 
 .aboutMe {
