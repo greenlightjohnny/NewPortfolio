@@ -34,10 +34,10 @@ function animateMenu() {
 /////////////Function Hide Nav on Scroll//////////////////
     let prevScrollPos = window.pageYOffset;
 function hideNavOnScroll() {
-    console.log('hell')
+   
     let currentScrollPos = window.pageYOffset;
     let navHas = nav.classList.contains('expand')
-    console.log(navHas);
+    
     if(navHas) {
         return;
     }
