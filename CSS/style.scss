@@ -135,10 +135,7 @@ html {
 //   }
 // }
 
-header {
-    position: relative;
-    height: 100vh;
-}
+
 
 .navShow {
     
@@ -459,16 +456,15 @@ nav.expand {
 
 
 header {
+    height: 100vh;
 
     .intro {
         max-width: 900px;
         margin: 0 auto;
-        padding-top: 200px;
+        padding-top: 20%;
 
-        @include tabletL {
-            //margin-left: 10%;
-            //margin-top: 20%;
-            max-width: 900px;
+        @media (orientation: landscape) {
+            padding-top: 5%;
         }
 
         .introsec {
@@ -515,7 +511,7 @@ header {
 /////////////////////////////////// PROJECTS //////////////////////////////
 .projects {
     //height: 200vh;
-    margin-top: -7rem;
+    //margin-top: -7rem;
 
 
     .flex {
@@ -672,24 +668,29 @@ header {
 
     .flexC {
         padding-bottom: 3rem;
-        @include tabletL {
-        //width: 90%;
         margin: 0 auto;
         display: flex;
-       
+        flex-wrap: wrap;
+        
         //justify-content: center;
         flex: 1;
+        justify-content: center;
+        @include tabletL {
+        //width: 90%;
+       
         }
     }
 
     .callMe {
         
         min-width: 320px;
-        max-width: 460px;
+        max-width: 480px;
         //margin-bottom: 4rem;
         margin: 1rem;
         position: relative;
-        overflow: hidden;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        //overflow: hidden;
 
         h3 {
             font-size: 2rem;
@@ -697,7 +698,7 @@ header {
            text-align: center;
 
            @include tabletM {
-            text-align: left;
+            //text-align: left;
            }
            
         }
@@ -727,13 +728,13 @@ header {
         }
         @include tabletM {
             
-            max-width: 450px;
-            justify-content: center;
-            margin: 0 auto;
+            //max-width: 450px;
+            //justify-content: center;
+            //margin: 0 auto;
         }
 
         @include tabletL {
-            margin: 1rem;
+            //margin: 1rem;
         }
     }
 
@@ -756,11 +757,15 @@ header {
         font-size: 3rem;
         //padding-top: 5rem;
         //padding-bottom: 2rem;
+        display: block;
+        position: absolute;
         color: #f4f4f4;
         font-family: 'Source Sans Pro';
-        max-width: 900px;
+        //max-width: 450px;
+        top: -3.1rem;
+        margin: 0 auto -1.5rem auto;
         margin-bottom: -1.5rem;
-        padding-left: 1rem;
+        //padding-left: 1rem;
         @include tabletM {
             //padding-top: 16rem;
         }
@@ -775,19 +780,19 @@ header {
         
         //width: 90%;
         min-width: 320px;
-        max-width: 460px;
+        max-width: 480px;
         margin: 1rem;
         display: flex;
         flex: 1;
         @include tabletM {
             
-            max-width: 450px;
-            justify-content: center;
-            margin: 0 auto;
+            //max-width: 450px;
+            //justify-content: center;
+           // margin: 0 auto;
         }
 
         @include tabletL {
-            margin: 1rem;
+            //margin: 1rem;
         }
     }
 
@@ -871,13 +876,14 @@ header {
     max-width: 1000px;
     margin: 0 auto;
     margin-top: 7rem;
+    margin-bottom: 7rem;
 
     .myTitle {
         max-width: 1000px;
         margin: 0 auto;
     
         h2 {
-            color: rgb(128, 72, 165);
+            color: rgb(211, 165, 241);
             margin-left: 1rem;
             font-size: 3rem;
             margin-bottom: -.6rem;
