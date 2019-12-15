@@ -167,7 +167,8 @@ html {
     height: auto;
     opacity: 1;
     transition: all ease-in-out 400ms;
-    padding-top: 8rem;
+    padding-top: 5rem;
+    padding-inline-start: 0;
 }
 .navShow {
     
@@ -192,7 +193,7 @@ html {
     height: auto;
     opacity: 1;
     transition: all ease-in-out 400ms;
-    padding-top: 7rem;
+    padding-top: 5rem;
 }
 
 
@@ -203,7 +204,7 @@ nav {
     overflow-y: hidden;
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 4;
     width: 100%;
     //background: rgba(255, 255, 255, .9);
     //background: #0c0c0c;
@@ -213,7 +214,7 @@ nav {
     justify-content: space-between;
     transition: all ease-in-out 1s;
     transition: height .4s linear;
-    transition: top .4s;
+    //transition: top .4s;
 
 
     @include tabletL {
@@ -229,7 +230,7 @@ nav {
         margin-left: 5%;
         color: #f4f4f4;
         font-weight: bold;
-        padding-top: 10px;
+        padding-top: 20px;
         font-size: 2rem;
         vertical-align: center;
         //background: turquoise;
@@ -316,6 +317,7 @@ nav {
         //width: 600px;
         height: 0;
         opacity: 0;
+        padding-inline-start: 0;
         transition: all ease-in-out 400ms;
 
 
@@ -440,9 +442,11 @@ nav {
 
 .navTop {
     top: 0;
+    transition: height ease-in-out .4s;
 }
 .navScroll {
     top: -4rem;
+    transition: height ease-in-out .4s;
 }
 
 
@@ -1037,6 +1041,10 @@ header {
         p {
             padding: 1rem;
             line-height: 1.5rem;
+            .skillTitle {
+                color: rgb(211, 165, 241);
+                font-size: 1.3rem;
+            }
         }
 
         .padThis {

@@ -49,7 +49,9 @@ html {
   opacity: 1;
   -webkit-transition: all ease-in-out 400ms;
   transition: all ease-in-out 400ms;
-  padding-top: 8rem;
+  padding-top: 5rem;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
 }
 
 .navShow {
@@ -75,7 +77,7 @@ html {
   opacity: 1;
   -webkit-transition: all ease-in-out 400ms;
   transition: all ease-in-out 400ms;
-  padding-top: 7rem;
+  padding-top: 5rem;
 }
 
 nav {
@@ -84,7 +86,7 @@ nav {
   overflow-y: hidden;
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 4;
   width: 100%;
   background: #0c0c0c;
   font-size: 1.3rem;
@@ -98,8 +100,6 @@ nav {
   transition: all ease-in-out 1s;
   -webkit-transition: height .4s linear;
   transition: height .4s linear;
-  -webkit-transition: top .4s;
-  transition: top .4s;
 }
 
 @media (min-width: 900px) {
@@ -114,7 +114,7 @@ nav .logo {
   margin-left: 5%;
   color: #f4f4f4;
   font-weight: bold;
-  padding-top: 10px;
+  padding-top: 20px;
   font-size: 2rem;
   vertical-align: center;
 }
@@ -214,6 +214,8 @@ nav ul {
   margin-bottom: 0;
   height: 0;
   opacity: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
   -webkit-transition: all ease-in-out 400ms;
   transition: all ease-in-out 400ms;
 }
@@ -303,10 +305,14 @@ nav li a:before {
 
 .navTop {
   top: 0;
+  -webkit-transition: height ease-in-out .4s;
+  transition: height ease-in-out .4s;
 }
 
 .navScroll {
   top: -4rem;
+  -webkit-transition: height ease-in-out .4s;
+  transition: height ease-in-out .4s;
 }
 
 nav.expand {
@@ -829,6 +835,11 @@ header p {
 .aboutMe .talking p {
   padding: 1rem;
   line-height: 1.5rem;
+}
+
+.aboutMe .talking p .skillTitle {
+  color: #d3a5f1;
+  font-size: 1.3rem;
 }
 
 .aboutMe .talking .padThis {

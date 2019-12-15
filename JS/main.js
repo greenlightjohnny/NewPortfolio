@@ -1,8 +1,4 @@
-if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('service worker registered'))
-      .catch(err => console.log('service worker not registered', err));
-  }
+
 
 
 const ham = document.querySelector('.ham');
@@ -38,8 +34,14 @@ function animateMenu() {
 /////////////Function Hide Nav on Scroll//////////////////
     let prevScrollPos = window.pageYOffset;
 function hideNavOnScroll() {
+    console.log('hell')
     let currentScrollPos = window.pageYOffset;
-    if(prevScrollPos > currentScrollPos) {
+    let navHas = nav.classList.contains('expand')
+    console.log(navHas);
+    if(navHas) {
+        return;
+    }
+    else if(prevScrollPos > currentScrollPos) {
         nav.classList.add('navTop');
         nav.classList.remove('navScroll')
     } else {
@@ -108,3 +110,8 @@ function debounce(func, wait = 20, immediate=true) {
 window.addEventListener('scroll', debounce(slideIn));
 window.addEventListener('scroll', debounce(hideNavOnScroll));
 
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('service worker registered'))
+      .catch(err => console.log('service worker not registered', err));
+  }
