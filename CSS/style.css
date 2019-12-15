@@ -405,7 +405,7 @@ header p {
   font-size: 3rem;
   font-family: "Source Sans Pro";
   margin-bottom: -11px;
-  color: #d3a5f1;
+  color: #2cb67d;
 }
 
 .projects .hiddenFlex div {
@@ -611,6 +611,7 @@ header p {
   line-height: 1.5rem;
   padding: 1rem;
   margin: 0;
+  color: #a7a9be;
 }
 
 .contact .callMe:after {
@@ -621,15 +622,15 @@ header p {
   position: absolute;
   top: 0px;
   left: 0px;
-  border-top: 2px solid turquoise;
-  border-left: 2px solid turquoise;
+  border-top: 2px solid #ff8906;
+  border-left: 2px solid #ff8906;
 }
 
 .contact h2 {
   font-size: 3rem;
   display: block;
   position: absolute;
-  color: #f4f4f4;
+  color: #f25f4c;
   font-family: 'Source Sans Pro';
   top: -3.1rem;
   margin: 0 auto -1.5rem auto;
@@ -663,19 +664,23 @@ header p {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-bottom: -10px;
   margin-left: 2rem;
   padding: 0 1rem 0 1rem;
   background: #0c0c0c;
   z-index: 5;
   position: absolute;
-  top: -10px;
+  top: -12px;
+  color: #ee6857;
+  font-family: "Source Sans Pro";
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .contact textarea {
   vertical-align: top;
-  border-bottom: 1px solid turquoise;
+  border-bottom: 1px solid #ff8906;
 }
 
 .contact .slideUp {
@@ -686,15 +691,24 @@ header p {
   font-family: 'Source Sans Pro';
   width: 100%;
   background: transparent;
-  border: 1px solid turquoise;
+  border: 1px solid #ff8906;
   border-radius: 2px;
   font-size: 1.1rem;
   color: #fff;
+  padding-left: 1rem;
   line-height: 2rem;
 }
 
+.contact textarea {
+  padding-top: 1rem;
+}
+
+.contact input:hover, .contact textarea:hover {
+  cursor: pointer;
+}
+
 .contact input {
-  border: 1px solid turquoise;
+  border: 1px solid #ff8906;
   height: 4rem;
   margin-bottom: 2rem;
 }
@@ -710,7 +724,7 @@ header p {
   font-weight: bold;
   font-size: 1.4rem;
   background-color: transparent;
-  border: 1px solid turquoise;
+  border: 1px solid #ff8906;
   letter-spacing: .3rem;
   text-transform: uppercase;
   -webkit-transition: all ease-in-out .4s;
@@ -721,7 +735,7 @@ header p {
 
 .contact button:hover {
   cursor: pointer;
-  background-color: #ef2e5d;
+  background-color: #ff8906;
 }
 
 .aboutMe {

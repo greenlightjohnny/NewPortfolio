@@ -537,7 +537,7 @@ header {
             font-size: 3rem;
             font-family: "Source Sans Pro";
             margin-bottom: -11px;
-            color: rgb(211, 165, 241);
+            color: #2cb67d;
             //z-index: 4;
         }
         div {
@@ -795,6 +795,7 @@ header {
             line-height: 1.5rem;
             padding: 1rem;
             margin: 0;
+            color: #a7a9be;
         }
         @include tabletM {
             
@@ -816,8 +817,8 @@ header {
         position: absolute;
         top: 0px;
         left: 0px;
-        border-top: 2px solid turquoise;
-        border-left: 2px solid turquoise;
+        border-top: 2px solid #ff8906;
+        border-left: 2px solid #ff8906;
     }
 
  
@@ -829,7 +830,7 @@ header {
         //padding-bottom: 2rem;
         display: block;
         position: absolute;
-        color: #f4f4f4;
+        color: #f25f4c;
         font-family: 'Source Sans Pro';
         //max-width: 450px;
         top: -3.1rem;
@@ -880,20 +881,24 @@ header {
         display: block;
         text-align: left;
         width: fit-content;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         margin-bottom: -10px;
         margin-left: 2rem;
         padding: 0 1rem 0 1rem;
         background: #0c0c0c;
         z-index: 5;
         position: absolute;
-        top: -10px;
+        top: -12px;
+        color: #ee6857;
+        font-family: "Source Sans Pro";
+        font-weight: bold;
+        text-transform: uppercase;
         
     }
 
     textarea {
         vertical-align: top;
-        border-bottom: 1px solid turquoise;
+        border-bottom: 1px solid #ff8906;
     }
 
     .slideUp {
@@ -906,17 +911,24 @@ header {
         width: 100%;
         background: transparent;
         
-        border: 1px solid turquoise;
+        border: 1px solid #ff8906;
         border-radius: 2px;
         font-size: 1.1rem;
         color: #fff;
-        
+        padding-left: 1rem;
         line-height: 2rem;
         //border: 1px solid $bluish;
     }
+    textarea {
+        padding-top: 1rem;
+    }
+
+    input:hover, textarea:hover {
+        cursor: pointer;
+    }
 
     input {
-        border: 1px solid turquoise;
+        border: 1px solid #ff8906;
         height: 4rem;
         margin-bottom: 2rem;
     }
@@ -934,7 +946,7 @@ header {
         font-weight: bold;
         font-size: 1.4rem;
         background-color: transparent;
-        border: 1px solid turquoise;
+        border: 1px solid #ff8906;
         //border-radius: 15px;
         letter-spacing: .3rem;
         text-transform: uppercase;
@@ -945,7 +957,7 @@ header {
 
     button:hover {
         cursor: pointer;
-        background-color: #ef2e5d;
+        background-color: #ff8906;
     }
   
     
