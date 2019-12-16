@@ -1,4 +1,8 @@
-
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('service worker registered'))
+      .catch(err => console.log('service worker not registered', err));
+  }
 
 
 const ham = document.querySelector('.ham');
@@ -110,8 +114,3 @@ function debounce(func, wait = 20, immediate=true) {
 window.addEventListener('scroll', debounce(slideIn));
 window.addEventListener('scroll', debounce(hideNavOnScroll));
 
-if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('service worker registered'))
-      .catch(err => console.log('service worker not registered', err));
-  }
