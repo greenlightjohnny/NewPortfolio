@@ -3,7 +3,7 @@
     "name": "Fred Jones",
     "lang": "en",
     "description": "Portfolio of Fred Jones",
-    "start_url": "https://www.fredjones.dev/",
+    "start_url": "/",
     "background_color": "#0c0c0c",
     "theme_color": "#40e0d0",
     "dir": "ltr",

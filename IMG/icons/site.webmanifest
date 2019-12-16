@@ -15,6 +15,6 @@
     ],
     "theme_color": "#0c0c0c",
     "background_color": "#0c0c0c",
-    "start_url": "https://romantic-ride-249daa.netlify.com/",
+    "start_url": "/",
     "display": "standalone"
 }
