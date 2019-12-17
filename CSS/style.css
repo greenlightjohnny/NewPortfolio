@@ -139,6 +139,11 @@ nav .ham {
   margin-top: 8px;
   width: 30px;
   height: 30px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  margin-top: 8px;
+  color: #f4f4f4;
 }
 
 @media (min-width: 900px) {
@@ -147,18 +152,23 @@ nav .ham {
   }
 }
 
+nav .ham:focus {
+  outline: none;
+}
+
 nav .mIcon,
 nav .mIcon:after,
 nav .mIcon:before {
   height: 4px;
   width: 100%;
   border-radius: 1px;
+  color: #f4f4f4;
 }
 
 nav .mIcon {
   position: relative;
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
   background: #f4f4f4;
   -webkit-transition: all 0ms 300ms;
   transition: all 0ms 300ms;

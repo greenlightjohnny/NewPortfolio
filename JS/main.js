@@ -68,7 +68,7 @@ function slideIn() {
   
 
  tiles.forEach(i => {
-     const slideInAt = (window.scrollY + window.innerHeight) - 200 / 2;
+     const slideInAt = (window.scrollY + window.innerHeight) - 250 / 2;
      const imageBottom = i.offsetTop + 400;
 
      const isHalfShown = slideInAt > i.offsetTop;

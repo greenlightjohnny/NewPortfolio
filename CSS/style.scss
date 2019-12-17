@@ -257,11 +257,21 @@ nav {
         margin-top: 8px;
         width: 30px;
         height: 30px;
+        background-color: transparent;
+        //@at-rootcolor: #f4f4f4;
+        padding: 0;
+        border: none;
+        margin-top: 8px;
+        color: #f4f4f4;
 
         @include tabletL {
             display: none;
         }
         
+    }
+
+    .ham:focus {
+        outline: none;
     }
 
     .mIcon,
@@ -270,12 +280,13 @@ nav {
         height: 4px;
         width: 100%;
         border-radius: 1px;
+        color: #f4f4f4;
 
     }
 
     .mIcon {
         position: relative;
-        transform: translateY(10px);
+        transform: translateY(1px);
         background: $ham;
         transition: all 0ms 300ms;
 
