@@ -112,7 +112,7 @@ nav .logo {
   width: 30px;
   height: 30px;
   margin-left: 5%;
-  color: #f4f4f4;
+  color: #6eefe2;
   font-weight: bold;
   padding-top: 5px;
   font-size: 1.7rem;
@@ -130,7 +130,7 @@ nav .logo {
 
 nav .logo a {
   text-decoration: none;
-  color: #f4f4f4;
+  color: #6eefe2;
 }
 
 nav .ham {
@@ -286,7 +286,7 @@ nav li a:after {
   left: 20px;
   overflow: hidden;
   width: 0;
-  height: 23px;
+  height: 26px;
   white-space: nowrap;
   -webkit-transition: all 0.5s cubic-bezier(0.66, 0.19, 0.19, 1);
   transition: all 0.5s cubic-bezier(0.66, 0.19, 0.19, 1);
@@ -405,7 +405,7 @@ header p {
   font-size: 3rem;
   font-family: "Source Sans Pro";
   margin-bottom: -11px;
-  color: #2cb67d;
+  color: #ef2e5d;
 }
 
 .projects .hiddenFlex div {
@@ -498,6 +498,7 @@ header p {
   z-index: 2;
   color: #f4f4f4;
   margin-left: 2rem;
+  margin-bottom: 0;
 }
 
 .projects .imageOne {
@@ -551,16 +552,13 @@ header p {
 }
 
 .one {
-  -webkit-transform: translateY(2rem);
-          transform: translateY(2rem);
-  -webkit-transition: opacity ease-in-out 500ms, -webkit-transform 300ms;
-  transition: opacity ease-in-out 500ms, -webkit-transform 300ms;
-  transition: transform 300ms, opacity ease-in-out 500ms;
-  transition: transform 300ms, opacity ease-in-out 500ms, -webkit-transform 300ms;
+  -webkit-transform: translateY(4rem) scale(1);
+          transform: translateY(4rem) scale(1);
+  -webkit-transition: opacity ease-in-out 500ms, -webkit-transform 300ms ease-in-out;
+  transition: opacity ease-in-out 500ms, -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, opacity ease-in-out 500ms;
+  transition: transform 300ms ease-in-out, opacity ease-in-out 500ms, -webkit-transform 300ms ease-in-out;
   opacity: 0;
-  overflow-y: hidden;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
 }
 
 .fromLeft {
@@ -622,15 +620,15 @@ header p {
   position: absolute;
   top: 0px;
   left: 0px;
-  border-top: 2px solid #ff8906;
-  border-left: 2px solid #ff8906;
+  border-top: 2px solid #6eefe2;
+  border-left: 2px solid #6eefe2;
 }
 
 .contact h2 {
   font-size: 3rem;
   display: block;
   position: absolute;
-  color: #f25f4c;
+  color: #ef2e5d;
   font-family: 'Source Sans Pro';
   top: -3.1rem;
   margin: 0 auto -1.5rem auto;
@@ -664,7 +662,7 @@ header p {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: -10px;
   margin-left: 2rem;
   padding: 0 1rem 0 1rem;
@@ -672,15 +670,14 @@ header p {
   z-index: 2;
   position: absolute;
   top: -12px;
-  color: #ee6857;
+  color: #f2f2f2;
   font-family: "Source Sans Pro";
-  font-weight: bold;
   text-transform: uppercase;
 }
 
 .contact textarea {
   vertical-align: top;
-  border-bottom: 1px solid #ff8906;
+  border-bottom: 1px solid #6eefe2;
 }
 
 .contact .slideUp {
@@ -691,10 +688,10 @@ header p {
   font-family: 'Source Sans Pro';
   width: 100%;
   background: transparent;
-  border: 1px solid #ff8906;
+  border: 1px solid #6eefe2;
   border-radius: 2px;
   font-size: 1.1rem;
-  color: #fff !important;
+  color: #fff;
   padding-left: 1rem;
   line-height: 2rem;
 }
@@ -708,7 +705,7 @@ header p {
 }
 
 .contact input {
-  border: 1px solid #ff8906;
+  border: 1px solid #6eefe2;
   height: 4rem;
   margin-bottom: 2rem;
 }
@@ -720,11 +717,11 @@ header p {
 
 .contact button {
   width: 10rem;
-  color: white;
+  color: #f2f2f2;
   font-weight: bold;
   font-size: 1.4rem;
   background-color: transparent;
-  border: 1px solid #ff8906;
+  border: 1px solid #6eefe2;
   letter-spacing: .3rem;
   text-transform: uppercase;
   -webkit-transition: all ease-in-out .4s;
@@ -735,7 +732,7 @@ header p {
 
 .contact button:hover {
   cursor: pointer;
-  background-color: #ff8906;
+  background-color: #6eefe2;
 }
 
 #mail:-webkit-autofill, #id:-webkit-autofill {
@@ -755,7 +752,7 @@ header p {
 }
 
 .aboutMe .myTitle h2 {
-  color: #d3a5f1;
+  color: #ef2e5d;
   margin-left: 1rem;
   font-size: 3rem;
   margin-bottom: -.6rem;
@@ -780,11 +777,10 @@ header p {
 }
 
 .aboutMe .hiddenFlex h2 {
-  color: #f4f4f4;
+  color: #ef2e5d;
   font-size: 3rem;
   font-family: "Source Sans Pro";
   margin-bottom: -11px;
-  color: #d3a5f1;
 }
 
 .aboutMe .hiddenFlex div {
@@ -866,15 +862,15 @@ header p {
 }
 
 .aboutMe .skills {
-  border-top: 1px solid #8048a5;
-  border-bottom: 1px solid #8048a5;
+  border-top: 1px solid #6eefe2;
+  border-bottom: 1px solid #6eefe2;
   position: relative;
   overflow: visible;
   max-height: 650px;
 }
 
 .aboutMe .skills .skillTitle {
-  color: #d3a5f1;
+  color: #6eefe2;
   font-size: 1.3rem;
 }
 
@@ -911,7 +907,7 @@ header p {
   position: absolute;
   top: 0px;
   right: 0px;
-  border-right: 1px solid #8048a5;
+  border-right: 1px solid #6eefe2;
 }
 
 .aboutMe .skills::before {
@@ -922,7 +918,7 @@ header p {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  border-left: 1px solid #8048a5;
+  border-left: 1px solid #6eefe2;
 }
 
 .aboutMe .aboutImage {
@@ -940,7 +936,7 @@ header p {
 .aboutMe .talking {
   position: relative;
   overflow: visible;
-  border-top: 1px solid #8048a5;
+  border-top: 1px solid #6eefe2;
   max-height: 650px;
 }
 
@@ -950,7 +946,7 @@ header p {
 }
 
 .aboutMe .talking p .skillTitle {
-  color: #d3a5f1;
+  color: #6eefe2;
   font-size: 1.3rem;
 }
 
@@ -981,7 +977,7 @@ header p {
   position: absolute;
   top: 0px;
   right: 0px;
-  border-right: 1px solid #8048a5;
+  border-right: 1px solid #6eefe2;
 }
 
 .aboutMe .talking::before {
@@ -992,8 +988,8 @@ header p {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  border-bottom: 1px solid #8048a5;
-  border-left: 1px solid #8048a5;
+  border-bottom: 1px solid #6eefe2;
+  border-left: 1px solid #6eefe2;
 }
 
 footer p {

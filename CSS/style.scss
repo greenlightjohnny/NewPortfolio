@@ -59,6 +59,9 @@ html {
   $white: white;
   $black: black;
   $ham: #f4f4f4;
+  $greenish: #40e0d0;
+  $greenish2: #6eefe2;
+  $offwhite: #f2f2f2;
 
 // $f4white: #f4f4f4;
 // @mixin center {
@@ -226,9 +229,9 @@ nav {
     .logo {
         width: 30px;
         height: 30px;
-        
+        //background-color: $greenish;
         margin-left: 5%;
-        color: #f4f4f4;
+        color: $greenish2;
         font-weight: bold;
         padding-top: 5px;
         font-size: 1.7rem;
@@ -243,7 +246,7 @@ nav {
         }
         a {
             text-decoration: none;
-            color: #f4f4f4;
+            color: $greenish2;
         }
     }
 
@@ -403,7 +406,7 @@ nav {
                 left: 20px;
                 overflow: hidden;
                 width: 0;
-                height: 23px;
+                height: 26px;
                 white-space: nowrap;
                 transition: all .5s cubic-bezier(.66,.19,.19,1);
             }
@@ -537,7 +540,8 @@ header {
             font-size: 3rem;
             font-family: "Source Sans Pro";
             margin-bottom: -11px;
-            color: #2cb67d;
+            color: $pinkish;
+            //color: #2cb67d;
             //z-index: 4;
         }
         div {
@@ -616,6 +620,7 @@ header {
             z-index: 2;
             color: #f4f4f4;
             margin-left: 2rem;
+            margin-bottom: 0;
         }
 
         // .pro {
@@ -714,11 +719,11 @@ header {
 ///// LEFT ///////
 
 .one {
-    transform: translateY(2rem);
-    transition: transform 300ms, opacity ease-in-out 500ms;
+    transform: translateY(4rem) scale(1);
+    transition: transform 300ms ease-in-out, opacity ease-in-out 500ms;
     opacity: 0; 
-    overflow-y: hidden;
-    transform: scale(.9);
+    //overflow-y: hidden;
+    //transform: scale(.9);
 }
 
 .fromLeft {
@@ -817,8 +822,8 @@ header {
         position: absolute;
         top: 0px;
         left: 0px;
-        border-top: 2px solid #ff8906;
-        border-left: 2px solid #ff8906;
+        border-top: 2px solid $greenish2;
+        border-left: 2px solid $greenish2;
     }
 
  
@@ -830,7 +835,7 @@ header {
         //padding-bottom: 2rem;
         display: block;
         position: absolute;
-        color: #f25f4c;
+        color: $pinkish;
         font-family: 'Source Sans Pro';
         //max-width: 450px;
         top: -3.1rem;
@@ -881,7 +886,7 @@ header {
         display: block;
         text-align: left;
         width: fit-content;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-bottom: -10px;
         margin-left: 2rem;
         padding: 0 1rem 0 1rem;
@@ -889,16 +894,17 @@ header {
         z-index: 2;
         position: absolute;
         top: -12px;
-        color: #ee6857;
+        color: $offwhite;
+        //color: #ee6857;
         font-family: "Source Sans Pro";
-        font-weight: bold;
+        //font-weight: bold;
         text-transform: uppercase;
         
     }
 
     textarea {
         vertical-align: top;
-        border-bottom: 1px solid #ff8906;
+        border-bottom: 1px solid $greenish2;
     }
 
     .slideUp {
@@ -911,10 +917,10 @@ header {
         width: 100%;
         background: transparent;
         
-        border: 1px solid #ff8906;
+        border: 1px solid $greenish2;
         border-radius: 2px;
         font-size: 1.1rem;
-        color: #fff !important;
+        color: #fff;
         padding-left: 1rem;
         line-height: 2rem;
         //box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0), inset 0 0 0 100px #0c0c0c;
@@ -934,7 +940,7 @@ header {
     }
 
     input {
-        border: 1px solid #ff8906;
+        border: 1px solid $greenish2;
         height: 4rem;
         margin-bottom: 2rem;
     }
@@ -948,11 +954,11 @@ header {
     button {
         
         width: 10rem;
-        color: white;
+        color: $offwhite;
         font-weight: bold;
         font-size: 1.4rem;
         background-color: transparent;
-        border: 1px solid #ff8906;
+        border: 1px solid $greenish2;
         //border-radius: 15px;
         letter-spacing: .3rem;
         text-transform: uppercase;
@@ -963,7 +969,7 @@ header {
 
     button:hover {
         cursor: pointer;
-        background-color: #ff8906;
+        background-color: $greenish2;
     }
   
     
@@ -987,7 +993,8 @@ header {
         margin: 0 auto 1rem 0;
     
         h2 {
-            color: rgb(211, 165, 241);
+            //color: rgb(211, 165, 241);
+            color: $pinkish;
             margin-left: 1rem;
             font-size: 3rem;
             margin-bottom: -.6rem;
@@ -1004,11 +1011,11 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         h2 {
-            color: #f4f4f4;
+            color: $pinkish;
             font-size: 3rem;
             font-family: "Source Sans Pro";
             margin-bottom: -11px;
-            color: rgb(211, 165, 241);
+            //color: rgb(211, 165, 241);
         }
         div {
             margin-bottom: 0;
@@ -1077,13 +1084,15 @@ header {
     }
 
     .skills {
-        border-top: 1px solid rgb(128, 72, 165);
-        border-bottom: 1px solid rgb(128, 72, 165);
+        //border-top: 1px solid rgb(128, 72, 165);
+        border-top: 1px solid $greenish2;
+        border-bottom: 1px solid $greenish2;
         position: relative;
         overflow: visible;
         max-height: 650px;
         .skillTitle {
-            color: rgb(211, 165, 241);
+            //color: rgb(211, 165, 241);
+            color: $greenish2;
             font-size: 1.3rem;
         }
         ul {
@@ -1128,7 +1137,7 @@ header {
         top: 0px;
         right: 0px;
         //border-top: 1px solid turquoise;
-        border-right: 1px solid rgb(128, 72, 165);
+        border-right: 1px solid $greenish2;
     
 }
 
@@ -1143,7 +1152,7 @@ header {
     bottom: 0px;
     left: 0px;
     //border-bottom: 1px solid rgb(128, 72, 165);
-    border-left: 1px solid rgb(128, 72, 165);
+    border-left: 1px solid $greenish2;
 
 }
 
@@ -1163,14 +1172,14 @@ header {
     .talking {
         position: relative;
         overflow: visible;
-        border-top: 1px solid rgb(128, 72, 165);
+        border-top: 1px solid $greenish2;
         max-height: 650px;
 
         p {
             padding: 1rem;
             line-height: 1.5rem;
             .skillTitle {
-                color: rgb(211, 165, 241);
+                color: $greenish2;
                 font-size: 1.3rem;
             }
         }
@@ -1210,7 +1219,7 @@ header {
             top: 0px;
             right: 0px;
             //border-top: 1px solid turquoise;
-            border-right: 1px solid rgb(128, 72, 165);
+            border-right: 1px solid $greenish2;
         
     }
 
@@ -1224,8 +1233,8 @@ header {
         position: absolute;
         bottom: 0px;
         left: 0px;
-        border-bottom: 1px solid rgb(128, 72, 165);
-        border-left: 1px solid rgb(128, 72, 165);
+        border-bottom: 1px solid $greenish2;
+        border-left: 1px solid $greenish2;
     
 }
 }
