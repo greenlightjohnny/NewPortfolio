@@ -495,13 +495,34 @@ header {
         justify-content: space-between;
         
         
-        @media (orientation: landscape) {
+        @media (orientation: landscape) and (min-width: 400px) {
             padding-top: 5%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            .myTitle {
+                width: 400px;
+            }
+
+            .myuglyface {
+                width: 280px;
+            }
+
+           
+        }
+
+        @media (orientation: landscape) and (min-width: 650px) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            .myuglyface {
+                width: 500px;
+            }
         }
 
         .introsec {
             margin: 1rem;
-            
+            width: fit-content;
         }
     }
 
@@ -540,28 +561,82 @@ header {
     }
 
     .myuglyface {
-        //display: flex;
+        display: flex;
         //flex-grow: 2;
         align-self: flex-end;
-        width: 400px;
+       // height: 100%;
+        width: 300px;
+        margin-right: 1rem;
+        @include tabletM {
+            width: 500px;
+        }
+
+       
     }
 
     svg {
         width: 100%;
         height: 100%;
+       
     }
 
-    #e {
+    #k {
         stroke-dasharray: 600;
-        animation: draw 5s linear forwards;
+        animation: draw 3s linear forwards;
     }
 
-    #d, #c {
+    #j, #l {
         animation: draw2 3s ease-in-out forwards;
         stroke-dasharray: 200;
     }
 
-    
+
+    #i, #a, #b, #c, #g {
+        stroke-dasharray: 200;
+        animation: draw2 2s linear forwards;
+    }
+
+    #d, #e {
+        stroke-dasharray: 200;
+        animation: draw4 5s linear forwards;
+    }
+
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 600;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw2 {
+    from {
+        stroke-dashoffset: -200;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw3 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw4 {
+    from {
+        stroke-dashoffset: 200;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 
@@ -1323,7 +1398,7 @@ footer {
         height: auto;
     }
 
-    #e {
+    #l {
         stroke-dasharray: 600;
         animation: draw 5s linear forwards;
     }

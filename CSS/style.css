@@ -367,14 +367,43 @@ header .intro {
           justify-content: space-between;
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (min-width: 400px) {
   header .intro {
     padding-top: 5%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header .intro .myTitle {
+    width: 400px;
+  }
+  header .intro .myuglyface {
+    width: 280px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 650px) {
+  header .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  header .intro .myuglyface {
+    width: 500px;
   }
 }
 
 header .intro .introsec {
   margin: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 header h1 {
@@ -408,9 +437,19 @@ header p {
 }
 
 header .myuglyface {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  width: 400px;
+  width: 300px;
+  margin-right: 1rem;
+}
+
+@media (min-width: 650px) {
+  header .myuglyface {
+    width: 500px;
+  }
 }
 
 header svg {
@@ -418,16 +457,100 @@ header svg {
   height: 100%;
 }
 
-header #e {
+header #k {
   stroke-dasharray: 600;
-  -webkit-animation: draw 5s linear forwards;
-          animation: draw 5s linear forwards;
+  -webkit-animation: draw 3s linear forwards;
+          animation: draw 3s linear forwards;
 }
 
-header #d, header #c {
+header #j, header #l {
   -webkit-animation: draw2 3s ease-in-out forwards;
           animation: draw2 3s ease-in-out forwards;
   stroke-dasharray: 200;
+}
+
+header #i, header #a, header #b, header #c, header #g {
+  stroke-dasharray: 200;
+  -webkit-animation: draw2 2s linear forwards;
+          animation: draw2 2s linear forwards;
+}
+
+header #d, header #e {
+  stroke-dasharray: 200;
+  -webkit-animation: draw4 5s linear forwards;
+          animation: draw4 5s linear forwards;
+}
+
+@-webkit-keyframes draw {
+  from {
+    stroke-dashoffset: 600;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 600;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes draw2 {
+  from {
+    stroke-dashoffset: -200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw2 {
+  from {
+    stroke-dashoffset: -200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes draw3 {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw3 {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes draw4 {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw4 {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .projects {
@@ -1095,7 +1218,7 @@ footer p {
   height: auto;
 }
 
-.mytest #e {
+.mytest #l {
   stroke-dasharray: 600;
   -webkit-animation: draw 5s linear forwards;
           animation: draw 5s linear forwards;
@@ -1107,27 +1230,9 @@ footer p {
   stroke-dasharray: 200;
 }
 
-@-webkit-keyframes draw {
-  from {
-    stroke-dashoffset: 600;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 @keyframes draw {
   from {
     stroke-dashoffset: 600;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@-webkit-keyframes draw2 {
-  from {
-    stroke-dashoffset: -200;
   }
   to {
     stroke-dashoffset: 0;
