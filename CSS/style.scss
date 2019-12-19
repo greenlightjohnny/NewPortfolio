@@ -551,7 +551,7 @@ header {
             font-size: 3rem;
             font-family: "Source Sans Pro";
             margin-bottom: -11px;
-            color: $pinkish;
+            color: turquoise;
             //color: #2cb67d;
             //z-index: 4;
         }
@@ -729,7 +729,7 @@ header {
 
 ///// LEFT ///////
 
-.one {
+.one, .up {
     transform: translateY(4rem) scale(1);
     transition: transform 300ms ease-in-out, opacity ease-in-out 500ms;
     opacity: 0; 
@@ -741,6 +741,21 @@ header {
     transform: translateY(0) scale(1);
     opacity: 1;
 }
+
+
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(.7, .7)}
+    to {opacity: 1;}
+}
+
+.fade-in-element{
+    animation: fade-in 1.4s;
+}
+
+.hidden {
+    opacity: 0;
+    
+} 
 
 
 
@@ -846,7 +861,7 @@ header {
         //padding-bottom: 2rem;
         display: block;
         position: absolute;
-        color: $pinkish;
+        color: turquoise;
         font-family: 'Source Sans Pro';
         //max-width: 450px;
         top: -3.1rem;
@@ -1005,7 +1020,7 @@ header {
     
         h2 {
             //color: rgb(211, 165, 241);
-            color: $pinkish;
+            color: turquoise;
             margin-left: 1rem;
             font-size: 3rem;
             margin-bottom: -.6rem;
@@ -1022,7 +1037,7 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         h2 {
-            color: $pinkish;
+            color: turquoise;
             font-size: 3rem;
             font-family: "Source Sans Pro";
             margin-bottom: -11px;
@@ -1065,7 +1080,7 @@ header {
         max-height: 480px;
         background-color: transparent;
         //border: 1px solid red;
-        margin: 0 1rem 2rem 1rem;
+        margin: 0 1rem 4rem 1rem;
         overflow: hidden;
         //position: relative;
         @include tabletL {

@@ -415,7 +415,7 @@ header p {
   font-size: 3rem;
   font-family: "Source Sans Pro";
   margin-bottom: -11px;
-  color: #ef2e5d;
+  color: turquoise;
 }
 
 .projects .hiddenFlex div {
@@ -561,7 +561,7 @@ header p {
           filter: hue-rotate(0deg);
 }
 
-.one {
+.one, .up {
   -webkit-transform: translateY(4rem) scale(1);
           transform: translateY(4rem) scale(1);
   -webkit-transition: opacity ease-in-out 500ms, -webkit-transform 300ms ease-in-out;
@@ -575,6 +575,37 @@ header p {
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
   opacity: 1;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.7, 0.7);
+            transform: scale(0.7, 0.7);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.7, 0.7);
+            transform: scale(0.7, 0.7);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-element {
+  -webkit-animation: fade-in 1.4s;
+          animation: fade-in 1.4s;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .contact {
@@ -638,7 +669,7 @@ header p {
   font-size: 3rem;
   display: block;
   position: absolute;
-  color: #ef2e5d;
+  color: turquoise;
   font-family: 'Source Sans Pro';
   top: -3.1rem;
   margin: 0 auto -1.5rem auto;
@@ -762,7 +793,7 @@ header p {
 }
 
 .aboutMe .myTitle h2 {
-  color: #ef2e5d;
+  color: turquoise;
   margin-left: 1rem;
   font-size: 3rem;
   margin-bottom: -.6rem;
@@ -787,7 +818,7 @@ header p {
 }
 
 .aboutMe .hiddenFlex h2 {
-  color: #ef2e5d;
+  color: turquoise;
   font-size: 3rem;
   font-family: "Source Sans Pro";
   margin-bottom: -11px;
@@ -839,7 +870,7 @@ header p {
   min-height: 320px;
   max-height: 480px;
   background-color: transparent;
-  margin: 0 1rem 2rem 1rem;
+  margin: 0 1rem 4rem 1rem;
   overflow: hidden;
 }
 

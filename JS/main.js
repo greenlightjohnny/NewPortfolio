@@ -60,10 +60,24 @@ function hideNavOnScroll() {
 //window.addEventListener('scroll', hideNavOnScroll)
 
 //////////////////SLIDE ON SCROLL/////////////////////////
-const tiles = document.querySelectorAll('.one');
-
+const tiles = document.querySelectorAll('.up');
+const grow = document.querySelectorAll('.fade-in');
 
 function slideIn() {
+
+
+    grow.forEach(i => {
+        if(i.getBoundingClientRect().top + 
+        i.scrollHeight / 1.2 +
+        document.documentElement.scrollTop < window.scrollY + window.innerHeight) {
+            i.classList.remove('hidden');
+            i.classList.add('fade-in-element');
+        }   else {
+            i.classList.add('hidden');
+            i.classList.remove('fade-in-element');
+        }
+        
+    });
 
   
 
@@ -72,7 +86,7 @@ function slideIn() {
      const imageBottom = i.offsetTop + 400;
 
      const isHalfShown = slideInAt > i.offsetTop;
-     const isNotScrolledPast = window.scrollY < imageBottom;
+     const isNotScrolledPast = window.scrollY < imageBottom + 100;
     
      if(isHalfShown && isNotScrolledPast) {
          i.classList.add('fromLeft')
