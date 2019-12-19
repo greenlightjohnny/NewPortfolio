@@ -638,6 +638,12 @@ header p {
   position: relative;
   margin-top: 2rem;
   margin-bottom: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .contact .callMe h3 {
@@ -1038,5 +1044,39 @@ footer p {
   color: #b9b3b3;
   font-family: "Source Sans Pro";
   padding-top: 2rem;
+}
+
+.mytest {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mytest svg {
+  width: 50%;
+  height: auto;
+}
+
+.mytest path {
+  stroke-dasharray: 600;
+  -webkit-animation: draw 5s linear forwards;
+          animation: draw 5s linear forwards;
+}
+
+@-webkit-keyframes draw {
+  from {
+    stroke-dashoffset: 600;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 600;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

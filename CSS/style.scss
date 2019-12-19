@@ -791,6 +791,8 @@ header {
         position: relative;
         margin-top: 2rem;
         margin-bottom: 5rem;
+        display: flex;
+        flex: 1;
         //overflow: hidden;
 
         h3 {
@@ -1272,5 +1274,34 @@ footer {
         color: #b9b3b3;
         font-family: "Source Sans Pro";
         padding-top: 2rem;
+    }
+}
+
+
+
+/////////////My test
+
+.mytest {
+
+    max-width: 900px;
+    margin: 0 auto;
+
+    svg {
+        width: 50%;
+        height: auto;
+    }
+
+    path {
+        stroke-dasharray: 600;
+        animation: draw 5s linear forwards;
+    }
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 600;
+    }
+    to {
+        stroke-dashoffset: 0;
     }
 }
