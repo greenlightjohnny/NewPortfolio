@@ -347,8 +347,24 @@ header {
 
 header .intro {
   max-width: 900px;
+  height: 100%;
   margin: 0 auto;
   padding-top: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (orientation: landscape) {
@@ -389,6 +405,29 @@ header p {
   font-weight: 400;
   margin-top: 0;
   max-width: 310px;
+}
+
+header .myuglyface {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 400px;
+}
+
+header svg {
+  width: 100%;
+  height: 100%;
+}
+
+header #e {
+  stroke-dasharray: 600;
+  -webkit-animation: draw 5s linear forwards;
+          animation: draw 5s linear forwards;
+}
+
+header #d, header #c {
+  -webkit-animation: draw2 3s ease-in-out forwards;
+          animation: draw2 3s ease-in-out forwards;
+  stroke-dasharray: 200;
 }
 
 .projects {
@@ -1056,10 +1095,16 @@ footer p {
   height: auto;
 }
 
-.mytest path {
+.mytest #e {
   stroke-dasharray: 600;
   -webkit-animation: draw 5s linear forwards;
           animation: draw 5s linear forwards;
+}
+
+.mytest #d, .mytest #c {
+  -webkit-animation: draw2 3s ease-in-out forwards;
+          animation: draw2 3s ease-in-out forwards;
+  stroke-dasharray: 200;
 }
 
 @-webkit-keyframes draw {
@@ -1074,6 +1119,24 @@ footer p {
 @keyframes draw {
   from {
     stroke-dashoffset: 600;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes draw2 {
+  from {
+    stroke-dashoffset: -200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw2 {
+  from {
+    stroke-dashoffset: -200;
   }
   to {
     stroke-dashoffset: 0;
