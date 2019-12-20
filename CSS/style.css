@@ -1247,4 +1247,17 @@ footer p {
     stroke-dashoffset: 0;
   }
 }
+
+::-webkit-scrollbar-track {
+  background-color: #0c0c0c;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: turquoise;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: turquoise;
+}
 /*# sourceMappingURL=style.css.map */
