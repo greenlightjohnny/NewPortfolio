@@ -349,7 +349,6 @@ header .intro {
   max-width: 900px;
   height: 100%;
   margin: 0 auto;
-  padding-top: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,41 +361,6 @@ header .intro {
           flex: 1;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media (orientation: landscape) and (min-width: 400px) {
-  header .intro {
-    padding-top: 5%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  header .intro .myTitle {
-    width: 400px;
-  }
-  header .intro .myuglyface {
-    width: 280px;
-  }
-}
-
-@media (orientation: landscape) and (min-width: 650px) {
-  header .intro {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  header .intro .myuglyface {
-    width: 500px;
-  }
 }
 
 header .intro .introsec {
@@ -404,6 +368,8 @@ header .intro .introsec {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin-bottom: auto;
+  margin-top: 10%;
 }
 
 header h1 {
@@ -442,115 +408,57 @@ header .myuglyface {
   display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  position: relative;
   width: 300px;
+  height: 300px;
   margin-right: 1rem;
 }
 
 @media (min-width: 650px) {
   header .myuglyface {
-    width: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
   }
 }
 
-header svg {
+header .myuglyface img {
+  position: absolute;
+  left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  -webkit-filter: hue-rotate(130deg) grayscale(0.7);
+          filter: hue-rotate(130deg) grayscale(0.7);
+  -webkit-animation: fadeFace 8s 3s forwards;
+          animation: fadeFace 8s 3s forwards;
 }
 
-header #k {
-  stroke-dasharray: 600;
-  -webkit-animation: draw 3s linear forwards;
-          animation: draw 3s linear forwards;
+header .myuglyface img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(92, 255, 241, 0.856);
+  z-index: 2;
 }
 
-header #j, header #l {
-  -webkit-animation: draw2 3s ease-in-out forwards;
-          animation: draw2 3s ease-in-out forwards;
-  stroke-dasharray: 200;
+header .myuglyface svg {
+  width: 100%;
+  height: auto;
+  position: absolute;
 }
 
-header #i, header #a, header #b, header #c, header #g {
-  stroke-dasharray: 200;
-  -webkit-animation: draw2 2s linear forwards;
-          animation: draw2 2s linear forwards;
+header .myuglyface #bb {
+  stroke-dasharray: 800;
+  z-index: 3;
+  -webkit-animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
 }
 
-header #d, header #e {
-  stroke-dasharray: 200;
-  -webkit-animation: draw4 5s linear forwards;
-          animation: draw4 5s linear forwards;
-}
-
-@-webkit-keyframes draw {
-  from {
-    stroke-dashoffset: 600;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw {
-  from {
-    stroke-dashoffset: 600;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@-webkit-keyframes draw2 {
-  from {
-    stroke-dashoffset: -200;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw2 {
-  from {
-    stroke-dashoffset: -200;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@-webkit-keyframes draw3 {
-  from {
-    stroke-dashoffset: 100;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw3 {
-  from {
-    stroke-dashoffset: 100;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@-webkit-keyframes draw4 {
-  from {
-    stroke-dashoffset: 200;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes draw4 {
-  from {
-    stroke-dashoffset: 200;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+header .myuglyface #aa {
+  display: none;
 }
 
 .projects {
@@ -1213,26 +1121,68 @@ footer p {
   margin: 0 auto;
 }
 
+.mytest .myuglyface2 {
+  position: relative;
+}
+
+.mytest .myuglyface2 img {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  -webkit-filter: hue-rotate(130deg) grayscale(0.7);
+          filter: hue-rotate(130deg) grayscale(0.7);
+  -webkit-animation: fadeFace 8s 3s forwards;
+          animation: fadeFace 8s 3s forwards;
+}
+
+.mytest .myuglyface2 img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(92, 255, 241, 0.856);
+  z-index: 2;
+}
+
 .mytest svg {
   width: 50%;
   height: auto;
+  position: absolute;
 }
 
-.mytest #l {
-  stroke-dasharray: 600;
-  -webkit-animation: draw 5s linear forwards;
-          animation: draw 5s linear forwards;
+.mytest #bb {
+  stroke-dasharray: 800;
+  z-index: 3;
+  -webkit-animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
 }
 
-.mytest #d, .mytest #c {
-  -webkit-animation: draw2 3s ease-in-out forwards;
-          animation: draw2 3s ease-in-out forwards;
-  stroke-dasharray: 200;
+.mytest g {
+  display: none;
+}
+
+@-webkit-keyframes draw {
+  from {
+    stroke-dashoffset: 800;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes draw {
   from {
-    stroke-dashoffset: 600;
+    stroke-dashoffset: 800;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes draw2 {
+  from {
+    stroke-dashoffset: -200;
   }
   to {
     stroke-dashoffset: 0;
@@ -1245,6 +1195,42 @@ footer p {
   }
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes fadeFace {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeFace {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeLines {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeLines {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 

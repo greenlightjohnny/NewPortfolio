@@ -487,42 +487,48 @@ header {
         max-width: 900px;
         height: 100%;
         margin: 0 auto;
-        padding-top: 20%;
+        //padding-top: 20%;
         display: flex;
         flex-direction: column;
         flex: 1;
         align-content: space-between;
-        justify-content: space-between;
         
-        
-        @media (orientation: landscape) and (min-width: 400px) {
-            padding-top: 5%;
-            flex-direction: row;
-            flex-wrap: wrap;
-            
-            .myTitle {
-                width: 400px;
-            }
+        //justify-content: space-between;
+        //flex-wrap: wrap;
 
-            .myuglyface {
-                width: 280px;
-            }
+        
+        
+        
+        // @media (orientation: landscape) and (max-width: 400px) {
+        //     padding-top: 5%;
+        //     flex-direction: row;
+        //     flex-wrap: wrap;
+            
+        //     .myTitle {
+        //         width: 400px;
+        //     }
+
+        //     .myuglyface {
+        //         width: 280px;
+        //     }
 
            
-        }
+        // }
 
-        @media (orientation: landscape) and (min-width: 650px) {
-            flex-direction: column;
-            flex-wrap: nowrap;
+        // @media (orientation: landscape) and (min-width: 650px) {
+        //     flex-direction: column;
+        //     flex-wrap: nowrap;
 
-            .myuglyface {
-                width: 500px;
-            }
-        }
+        //     .myuglyface {
+        //         width: 500px;
+        //     }
+        // }
 
         .introsec {
             margin: 1rem;
             width: fit-content;
+            margin-bottom: auto;
+            margin-top: 10%;
         }
     }
 
@@ -563,83 +569,128 @@ header {
     .myuglyface {
         display: flex;
         //flex-grow: 2;
+        //flex: 1;
         align-self: flex-end;
+        position: relative;
        // height: 100%;
         width: 300px;
+        height: 300px;
         margin-right: 1rem;
+        
         @include tabletM {
-            width: 500px;
+            max-width: 500px;
+            max-height: 500px;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            filter: hue-rotate(130deg) grayscale(.7);
+            animation: fadeFace 8s 3s forwards;
+
+        }
+
+        img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(92, 255, 241, 0.856);
+            z-index: 2;
+            
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            //z-index: 4;
+        }
+    
+        #bb {
+            stroke-dasharray: 800;
+            z-index: 3;
+            animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
+        }
+        
+        #aa {
+            display: none;
         }
 
        
     }
 
-    svg {
-        width: 100%;
-        height: 100%;
+//     svg {
+//         width: 100%;
+//         height: 100%;
        
-    }
+//     }
 
-    #k {
-        stroke-dasharray: 600;
-        animation: draw 3s linear forwards;
-    }
+//     #k {
+//         stroke-dasharray: 600;
+//         animation: draw 3s linear forwards;
+//     }
 
-    #j, #l {
-        animation: draw2 3s ease-in-out forwards;
-        stroke-dasharray: 200;
-    }
+//     #j, #l {
+//         animation: draw2 3s ease-in-out forwards;
+//         stroke-dasharray: 200;
+//     }
 
 
-    #i, #a, #b, #c, #g {
-        stroke-dasharray: 200;
-        animation: draw2 2s linear forwards;
-    }
+//     #i, #a, #b, #c, #g {
+//         stroke-dasharray: 200;
+//         animation: draw2 2s linear forwards;
+//     }
 
-    #d, #e {
-        stroke-dasharray: 200;
-        animation: draw4 5s linear forwards;
-    }
+//     #d, #e {
+//         stroke-dasharray: 200;
+//         animation: draw4 5s linear forwards;
+//     }
+
+// }
+
+// @keyframes draw {
+//     from {
+//         stroke-dashoffset: 600;
+//     }
+//     to {
+//         stroke-dashoffset: 0;
+//     }
+// }
+
+// @keyframes draw2 {
+//     from {
+//         stroke-dashoffset: -200;
+//     }
+//     to {
+//         stroke-dashoffset: 0;
+//     }
+// }
+
+// @keyframes draw3 {
+//     from {
+//         stroke-dashoffset: 100;
+//     }
+//     to {
+//         stroke-dashoffset: 0;
+//     }
+// }
+
+// @keyframes draw4 {
+//     from {
+//         stroke-dashoffset: 200;
+//     }
+//     to {
+//         stroke-dashoffset: 0;
+//     }
+// }
 
 }
-
-@keyframes draw {
-    from {
-        stroke-dashoffset: 600;
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes draw2 {
-    from {
-        stroke-dashoffset: -200;
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes draw3 {
-    from {
-        stroke-dashoffset: 100;
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes draw4 {
-    from {
-        stroke-dashoffset: 200;
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-
 /////////////////////////////////// PROJECTS //////////////////////////////
 .projects {
     //height: 200vh;
@@ -1392,26 +1443,67 @@ footer {
 
     max-width: 900px;
     margin: 0 auto;
+    .myuglyface2 {
+        position: relative;
+
+        img {
+            position: absolute;
+            left: 0;
+            width: 50%;
+            opacity: 0;
+            filter: hue-rotate(130deg) grayscale(.7);
+            animation: fadeFace 8s 3s forwards;
+
+        }
+
+        img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(92, 255, 241, 0.856);
+            z-index: 2;
+            
+        }
+    }
+
 
     svg {
         width: 50%;
         height: auto;
+        position: absolute;
+        //z-index: 4;
     }
 
-    #l {
-        stroke-dasharray: 600;
-        animation: draw 5s linear forwards;
+    #bb {
+        stroke-dasharray: 800;
+        z-index: 3;
+        animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
     }
+    
+    g {
+        display: none;
+    }
+        
 
-    #d, #c {
-        animation: draw2 3s ease-in-out forwards;
-        stroke-dasharray: 200;
-    }
+        
+    
+   
+
+    // #l {
+    //     stroke-dasharray: 600;
+    //     animation: draw 5s linear forwards;
+    // }
+
+    // #ff {
+    //     animation: draw2 3s ease-in-out forwards;
+    //     stroke-dasharray: 200;
+    // }
 }
 
 @keyframes draw {
     from {
-        stroke-dashoffset: 600;
+        stroke-dashoffset: 800;
     }
     to {
         stroke-dashoffset: 0;
@@ -1424,6 +1516,23 @@ footer {
     }
     to {
         stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fadeFace {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeLines {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
     }
 }
 
