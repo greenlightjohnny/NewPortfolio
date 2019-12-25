@@ -613,17 +613,129 @@ header {
             object-fit: contain;
             //z-index: 4;
         }
-    
-        #bb {
-            stroke-dasharray: 800;
-            z-index: 3;
-            animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
-        }
-        
-        #aa {
-            display: none;
-        }
 
+
+    
+        // #bb {
+        //     stroke-dasharray: 800;
+        //     z-index: 3;
+        //     animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
+        // }
+        
+        // #aa {
+        //     display: none;
+        // }
+
+        
+            ////pasted
+            .mynewsvg {
+                position: relative;
+                max-width: 500px;
+                width: 500px;
+                height: 100%;
+                img {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: auto;
+                    opacity: 0;
+                    filter: hue-rotate(110deg) grayscale(.7);
+                    animation: fadeFace 8s 4s forwards;
+        
+                }
+        
+                // img::after {
+                //     content: '';
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     background-color: rgba(92, 255, 241, 0.856);
+                //     z-index: 2;
+                    
+                // }
+            }
+        
+        
+            svg {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                //z-index: 4;
+            }
+        
+            #bb {
+                stroke-dasharray: 800;
+                z-index: 3;
+                animation: draw 3s is linear forwards, fadeLines 8s 3s forwards;
+                display: none;
+            }
+            
+            g {
+                display: none;
+            }
+        
+            #am {
+                stroke-dasharray: 185;
+                
+                animation: drawCollar 3s 1s linear forwards, fadeLines 8s 3s forwards;
+                opacity: 0;
+            }
+        
+            #bm {
+                stroke-dasharray: 205;
+                animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+                opacity: 0;
+            }
+            #cm {
+                stroke-dasharray: 205;
+                animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+                opacity: 0;
+            }
+        
+            #dm {
+                stroke-dasharray: 205;
+                animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+                opacity: 0;
+            }
+        
+            #em, #fm, #gm, #hm, #im, #gm, #lm, #jm {
+                stroke-dasharray: 205;
+                animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+                opacity: 0;
+            }
+        
+            #km, #pm {
+                stroke-dasharray: 370;
+                animation: draw5 3s 1s linear forwards, fadeLines 8s 3s forwards;
+                opacity: 0;
+            }
+        
+            #mm {
+                display: none;
+            }
+        
+            ////Eyes 
+            #nm, #om {
+                stroke-dasharray: 70;
+                animation: drawEyes 3s 1s linear forwards, fadeLines 8s 3s forwards;
+                opacity: 0;
+            }
+        
+           
+        
+                
+            
+           
+        
+            #l {
+                stroke-dasharray: 600;
+                animation: draw 5s linear forwards;
+            }
+        
+            #ff {
+                animation: draw2 3s ease-in-out forwards;
+                stroke-dasharray: 200;
+            }
        
     }
 
@@ -1461,7 +1573,7 @@ footer {
             height: auto;
             opacity: 0;
             filter: hue-rotate(110deg) grayscale(.7);
-            animation: fadeFace 8s 5s forwards;
+            animation: fadeFace 8s 4s forwards;
 
         }
 
@@ -1487,7 +1599,8 @@ footer {
     #bb {
         stroke-dasharray: 800;
         z-index: 3;
-        animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
+        animation: draw 3s is linear forwards, fadeLines 8s 3s forwards;
+        display: none;
     }
     
     g {
@@ -1497,7 +1610,8 @@ footer {
     #am {
         stroke-dasharray: 185;
         
-        animation: drawCollar 3s linear forwards, fadeLines 8s 3s forwards;
+        animation: drawCollar 3s 1s linear forwards, fadeLines 8s 3s forwards;
+        opacity: 0;
     }
 
     #bm {
@@ -1519,13 +1633,13 @@ footer {
 
     #em, #fm, #gm, #hm, #im, #gm, #lm, #jm {
         stroke-dasharray: 205;
-        animation: draw2 3s 1s linear forwards, fadeLines 8s 4s forwards;
+        animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
         opacity: 0;
     }
 
     #km, #pm {
-        stroke-dasharray: 350;
-        animation: draw5 3s linear forwards, fadeLines 8s 3s forwards;
+        stroke-dasharray: 370;
+        animation: draw5 3s 1s linear forwards, fadeLines 8s 3s forwards;
         opacity: 0;
     }
 
@@ -1536,8 +1650,16 @@ footer {
     ////Eyes 
     #nm, #om {
         stroke-dasharray: 70;
-        animation: drawEyes 3s 1s linear forwards, fadeLines 8s 4s forwards;
-        opacity: 1;
+        animation: drawEyes 3s 1s linear forwards, fadeLines 8s 3s forwards;
+        opacity: 0;
+    }
+
+    #nm {
+        
+        box-shadow:
+            0 0 60px 30px #fff,  /* inner white */
+            0 0 100px 60px #f0f, /* middle magenta */
+            0 0 140px 90px #0ff; /* outer cyan */
     }
         
 
@@ -1545,23 +1667,25 @@ footer {
     
    
 
-    // #l {
-    //     stroke-dasharray: 600;
-    //     animation: draw 5s linear forwards;
-    // }
+    #l {
+        stroke-dasharray: 600;
+        animation: draw 5s linear forwards;
+    }
 
-    // #ff {
-    //     animation: draw2 3s ease-in-out forwards;
-    //     stroke-dasharray: 200;
-    // }
+    #ff {
+        animation: draw2 3s ease-in-out forwards;
+        stroke-dasharray: 200;
+    }
 }
 
 @keyframes drawCollar {
     from {
         stroke-dashoffset: 185;
+        opacity: 1;
     }
     to {
         stroke-dashoffset: 0;
+        opacity: 1;
     }
 }
 
@@ -1587,7 +1711,7 @@ footer {
 
 @keyframes draw5 {
     from {
-        stroke-dashoffset: -350;
+        stroke-dashoffset: -370;
         opacity: 1;
     }
     to {

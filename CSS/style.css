@@ -454,15 +454,106 @@ header .myuglyface svg {
      object-fit: contain;
 }
 
+header .myuglyface .mynewsvg {
+  position: relative;
+  max-width: 500px;
+  width: 500px;
+  height: 100%;
+}
+
+header .myuglyface .mynewsvg img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  -webkit-filter: hue-rotate(110deg) grayscale(0.7);
+          filter: hue-rotate(110deg) grayscale(0.7);
+  -webkit-animation: fadeFace 8s 4s forwards;
+          animation: fadeFace 8s 4s forwards;
+}
+
+header .myuglyface svg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
 header .myuglyface #bb {
   stroke-dasharray: 800;
   z-index: 3;
-  -webkit-animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
-          animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
+  -webkit-animation: draw 3s is linear forwards, fadeLines 8s 3s forwards;
+          animation: draw 3s is linear forwards, fadeLines 8s 3s forwards;
+  display: none;
 }
 
-header .myuglyface #aa {
+header .myuglyface g {
   display: none;
+}
+
+header .myuglyface #am {
+  stroke-dasharray: 185;
+  -webkit-animation: drawCollar 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: drawCollar 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+header .myuglyface #bm {
+  stroke-dasharray: 205;
+  -webkit-animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+header .myuglyface #cm {
+  stroke-dasharray: 205;
+  -webkit-animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+header .myuglyface #dm {
+  stroke-dasharray: 205;
+  -webkit-animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+header .myuglyface #em, header .myuglyface #fm, header .myuglyface #gm, header .myuglyface #hm, header .myuglyface #im, header .myuglyface #gm, header .myuglyface #lm, header .myuglyface #jm {
+  stroke-dasharray: 205;
+  -webkit-animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+header .myuglyface #km, header .myuglyface #pm {
+  stroke-dasharray: 370;
+  -webkit-animation: draw5 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw5 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+header .myuglyface #mm {
+  display: none;
+}
+
+header .myuglyface #nm, header .myuglyface #om {
+  stroke-dasharray: 70;
+  -webkit-animation: drawEyes 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: drawEyes 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+header .myuglyface #l {
+  stroke-dasharray: 600;
+  -webkit-animation: draw 5s linear forwards;
+          animation: draw 5s linear forwards;
+}
+
+header .myuglyface #ff {
+  -webkit-animation: draw2 3s ease-in-out forwards;
+          animation: draw2 3s ease-in-out forwards;
+  stroke-dasharray: 200;
 }
 
 .projects {
@@ -1140,8 +1231,8 @@ footer p {
   opacity: 0;
   -webkit-filter: hue-rotate(110deg) grayscale(0.7);
           filter: hue-rotate(110deg) grayscale(0.7);
-  -webkit-animation: fadeFace 8s 5s forwards;
-          animation: fadeFace 8s 5s forwards;
+  -webkit-animation: fadeFace 8s 4s forwards;
+          animation: fadeFace 8s 4s forwards;
 }
 
 .mytest svg {
@@ -1153,8 +1244,9 @@ footer p {
 .mytest #bb {
   stroke-dasharray: 800;
   z-index: 3;
-  -webkit-animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
-          animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
+  -webkit-animation: draw 3s is linear forwards, fadeLines 8s 3s forwards;
+          animation: draw 3s is linear forwards, fadeLines 8s 3s forwards;
+  display: none;
 }
 
 .mytest g {
@@ -1163,8 +1255,9 @@ footer p {
 
 .mytest #am {
   stroke-dasharray: 185;
-  -webkit-animation: drawCollar 3s linear forwards, fadeLines 8s 3s forwards;
-          animation: drawCollar 3s linear forwards, fadeLines 8s 3s forwards;
+  -webkit-animation: drawCollar 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: drawCollar 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
 }
 
 .mytest #bm {
@@ -1190,15 +1283,15 @@ footer p {
 
 .mytest #em, .mytest #fm, .mytest #gm, .mytest #hm, .mytest #im, .mytest #gm, .mytest #lm, .mytest #jm {
   stroke-dasharray: 205;
-  -webkit-animation: draw2 3s 1s linear forwards, fadeLines 8s 4s forwards;
-          animation: draw2 3s 1s linear forwards, fadeLines 8s 4s forwards;
+  -webkit-animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
   opacity: 0;
 }
 
 .mytest #km, .mytest #pm {
-  stroke-dasharray: 350;
-  -webkit-animation: draw5 3s linear forwards, fadeLines 8s 3s forwards;
-          animation: draw5 3s linear forwards, fadeLines 8s 3s forwards;
+  stroke-dasharray: 370;
+  -webkit-animation: draw5 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw5 3s 1s linear forwards, fadeLines 8s 3s forwards;
   opacity: 0;
 }
 
@@ -1208,26 +1301,48 @@ footer p {
 
 .mytest #nm, .mytest #om {
   stroke-dasharray: 70;
-  -webkit-animation: drawEyes 3s 1s linear forwards, fadeLines 8s 4s forwards;
-          animation: drawEyes 3s 1s linear forwards, fadeLines 8s 4s forwards;
-  opacity: 1;
+  -webkit-animation: drawEyes 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: drawEyes 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+.mytest #nm {
+  -webkit-box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #f0f, 0 0 140px 90px #0ff;
+          box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #f0f, 0 0 140px 90px #0ff;
+  /* outer cyan */
+}
+
+.mytest #l {
+  stroke-dasharray: 600;
+  -webkit-animation: draw 5s linear forwards;
+          animation: draw 5s linear forwards;
+}
+
+.mytest #ff {
+  -webkit-animation: draw2 3s ease-in-out forwards;
+          animation: draw2 3s ease-in-out forwards;
+  stroke-dasharray: 200;
 }
 
 @-webkit-keyframes drawCollar {
   from {
     stroke-dashoffset: 185;
+    opacity: 1;
   }
   to {
     stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 
 @keyframes drawCollar {
   from {
     stroke-dashoffset: 185;
+    opacity: 1;
   }
   to {
     stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 
@@ -1273,7 +1388,7 @@ footer p {
 
 @-webkit-keyframes draw5 {
   from {
-    stroke-dashoffset: -350;
+    stroke-dashoffset: -370;
     opacity: 1;
   }
   to {
@@ -1284,7 +1399,7 @@ footer p {
 
 @keyframes draw5 {
   from {
-    stroke-dashoffset: -350;
+    stroke-dashoffset: -370;
     opacity: 1;
   }
   to {
