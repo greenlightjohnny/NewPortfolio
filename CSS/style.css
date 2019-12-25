@@ -1125,32 +1125,27 @@ footer p {
   margin: 0 auto;
 }
 
-.mytest .myuglyface2 {
+.mytest .mynewsvg {
   position: relative;
+  max-width: 500px;
+  min-height: 500px;
+  height: 100%;
 }
 
-.mytest .myuglyface2 img {
+.mytest .mynewsvg img {
   position: absolute;
   left: 0;
-  width: 50%;
+  width: 100%;
+  height: auto;
   opacity: 0;
-  -webkit-filter: hue-rotate(130deg) grayscale(0.7);
-          filter: hue-rotate(130deg) grayscale(0.7);
-  -webkit-animation: fadeFace 8s 3s forwards;
-          animation: fadeFace 8s 3s forwards;
-}
-
-.mytest .myuglyface2 img::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(92, 255, 241, 0.856);
-  z-index: 2;
+  -webkit-filter: hue-rotate(110deg) grayscale(0.7);
+          filter: hue-rotate(110deg) grayscale(0.7);
+  -webkit-animation: fadeFace 8s 5s forwards;
+          animation: fadeFace 8s 5s forwards;
 }
 
 .mytest svg {
-  width: 50%;
+  width: 100%;
   height: auto;
   position: absolute;
 }
@@ -1164,6 +1159,76 @@ footer p {
 
 .mytest g {
   display: none;
+}
+
+.mytest #am {
+  stroke-dasharray: 185;
+  -webkit-animation: drawCollar 3s linear forwards, fadeLines 8s 3s forwards;
+          animation: drawCollar 3s linear forwards, fadeLines 8s 3s forwards;
+}
+
+.mytest #bm {
+  stroke-dasharray: 205;
+  -webkit-animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+.mytest #cm {
+  stroke-dasharray: 205;
+  -webkit-animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+.mytest #dm {
+  stroke-dasharray: 205;
+  -webkit-animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+.mytest #em, .mytest #fm, .mytest #gm, .mytest #hm, .mytest #im, .mytest #gm, .mytest #lm, .mytest #jm {
+  stroke-dasharray: 205;
+  -webkit-animation: draw2 3s 1s linear forwards, fadeLines 8s 4s forwards;
+          animation: draw2 3s 1s linear forwards, fadeLines 8s 4s forwards;
+  opacity: 0;
+}
+
+.mytest #km, .mytest #pm {
+  stroke-dasharray: 350;
+  -webkit-animation: draw5 3s linear forwards, fadeLines 8s 3s forwards;
+          animation: draw5 3s linear forwards, fadeLines 8s 3s forwards;
+  opacity: 0;
+}
+
+.mytest #mm {
+  display: none;
+}
+
+.mytest #nm, .mytest #om {
+  stroke-dasharray: 70;
+  -webkit-animation: drawEyes 3s 1s linear forwards, fadeLines 8s 4s forwards;
+          animation: drawEyes 3s 1s linear forwards, fadeLines 8s 4s forwards;
+  opacity: 1;
+}
+
+@-webkit-keyframes drawCollar {
+  from {
+    stroke-dashoffset: 185;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCollar {
+  from {
+    stroke-dashoffset: 185;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @-webkit-keyframes draw {
@@ -1184,21 +1249,69 @@ footer p {
   }
 }
 
-@-webkit-keyframes draw2 {
+@-webkit-keyframes drawEyes {
   from {
-    stroke-dashoffset: -200;
+    stroke-dashoffset: -70;
+    opacity: 1;
   }
   to {
     stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes drawEyes {
+  from {
+    stroke-dashoffset: -70;
+    opacity: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes draw5 {
+  from {
+    stroke-dashoffset: -350;
+    opacity: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes draw5 {
+  from {
+    stroke-dashoffset: -350;
+    opacity: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes draw2 {
+  from {
+    stroke-dashoffset: -205;
+    opacity: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 
 @keyframes draw2 {
   from {
-    stroke-dashoffset: -200;
+    stroke-dashoffset: -205;
+    opacity: 1;
   }
   to {
     stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 
