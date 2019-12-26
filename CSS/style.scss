@@ -481,6 +481,7 @@ nav.expand {
 
 
 header {
+    min-height: -webkit-fill-available;
     height: 100vh;
 
     .intro {
@@ -493,42 +494,21 @@ header {
         flex: 1;
         align-content: space-between;
         
-        //justify-content: space-between;
-        //flex-wrap: wrap;
-
-        
-        
-        
-        // @media (orientation: landscape) and (max-width: 400px) {
-        //     padding-top: 5%;
-        //     flex-direction: row;
-        //     flex-wrap: wrap;
-            
-        //     .myTitle {
-        //         width: 400px;
-        //     }
-
-        //     .myuglyface {
-        //         width: 280px;
-        //     }
-
-           
-        // }
-
-        // @media (orientation: landscape) and (min-width: 650px) {
-        //     flex-direction: column;
-        //     flex-wrap: nowrap;
-
-        //     .myuglyface {
-        //         width: 500px;
-        //     }
-        // }
+        @media screen and (min-width: 400px) and (orientation: landscape) {
+            flex-direction: row;
+        }
 
         .introsec {
             margin: 1rem;
-            width: fit-content;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
             margin-bottom: auto;
             margin-top: 10%;
+
+            @include tabletM {
+
+            }
         }
     }
 
@@ -569,70 +549,37 @@ header {
     .myuglyface {
         display: flex;
         //flex-grow: 2;
-        //flex: 1;
+        flex: 1;
         align-self: flex-end;
         position: relative;
        // height: 100%;
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: auto;
         margin-right: 1rem;
+        max-width: 450px;
+        max-height: 450px;
+        margin-left: 1rem;
         
-        @include tabletM {
-            max-width: 500px;
-            max-height: 500px;
-            width: 100%;
-            height: 100%;
-        }
+        // @include tabletM {
+        //     max-width: 500px;
+        //     max-height: 500px;
+        //     width: 100%;
+        //     height: 100%;
+        // }
 
-        img {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            opacity: 0;
-            filter: hue-rotate(130deg) grayscale(.7);
-            animation: fadeFace 8s 3s forwards;
+       
 
-        }
-
-        img::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(92, 255, 241, 0.856);
-            z-index: 2;
-            
-        }
-
-        svg {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            object-fit: contain;
-            //z-index: 4;
-        }
+        
 
 
     
-        // #bb {
-        //     stroke-dasharray: 800;
-        //     z-index: 3;
-        //     animation: draw 3s linear forwards, fadeLines 8s 3s forwards;
-        // }
-        
-        // #aa {
-        //     display: none;
-        // }
+      
+            // .mynewsvg {
+            //     position: relative;
+            //     max-width: 500px;
+            //     width: 500px;
+            //     height: 100%;
 
-        
-            ////pasted
-            .mynewsvg {
-                position: relative;
-                max-width: 500px;
-                width: 500px;
-                height: 100%;
                 img {
                     position: absolute;
                     left: 0;
@@ -641,78 +588,61 @@ header {
                     opacity: 0;
                     filter: hue-rotate(110deg) grayscale(.7);
                     animation: fadeFace 8s 4s forwards;
+                    bottom: 0;
         
                 }
         
-                // img::after {
-                //     content: '';
-                //     position: absolute;
-                //     top: 0;
-                //     left: 0;
-                //     background-color: rgba(92, 255, 241, 0.856);
-                //     z-index: 2;
-                    
-                // }
-            }
+               
+            
         
         
             svg {
                 width: 100%;
                 height: auto;
                 position: absolute;
+                bottom: 0;
                 //z-index: 4;
             }
         
-            #bb {
-                stroke-dasharray: 800;
-                z-index: 3;
-                animation: draw 3s is linear forwards, fadeLines 8s 3s forwards;
-                display: none;
-            }
             
-            g {
-                display: none;
-            }
         
             #am {
                 stroke-dasharray: 185;
                 
-                animation: drawCollar 3s 1s linear forwards, fadeLines 8s 3s forwards;
+                animation: drawCollar 3s 0s linear forwards, fadeLines 8s 3s forwards;
                 opacity: 0;
             }
         
-            #bm {
+            #bm, #cm {
                 stroke-dasharray: 205;
-                animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
+                animation: draw2 3s 0s linear forwards, fadeLines 8s 3s forwards;
                 opacity: 0;
             }
-            #cm {
-                stroke-dasharray: 205;
-                animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
-                opacity: 0;
-            }
+         
         
             #dm {
                 stroke-dasharray: 205;
                 animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
                 opacity: 0;
             }
+
+            #jm, #lm, #mm {
+                display: none;
+            }
         
-            #em, #fm, #gm, #hm, #im, #gm, #lm, #jm {
+            #em, #fm, #gm, #hm, #im, #gm {
                 stroke-dasharray: 205;
                 animation: draw2 3s 1s linear forwards, fadeLines 8s 3s forwards;
                 opacity: 0;
             }
-        
+            ///Face outline
             #km, #pm {
                 stroke-dasharray: 370;
-                animation: draw5 3s 1s linear forwards, fadeLines 8s 3s forwards;
+                animation: draw5 2s 0s linear forwards, fadeLines 8s 3s forwards;
                 opacity: 0;
             }
         
-            #mm {
-                display: none;
-            }
+           
         
             ////Eyes 
             #nm, #om {
@@ -739,70 +669,8 @@ header {
        
     }
 
-//     svg {
-//         width: 100%;
-//         height: 100%;
-       
-//     }
-
-//     #k {
-//         stroke-dasharray: 600;
-//         animation: draw 3s linear forwards;
-//     }
-
-//     #j, #l {
-//         animation: draw2 3s ease-in-out forwards;
-//         stroke-dasharray: 200;
-//     }
 
 
-//     #i, #a, #b, #c, #g {
-//         stroke-dasharray: 200;
-//         animation: draw2 2s linear forwards;
-//     }
-
-//     #d, #e {
-//         stroke-dasharray: 200;
-//         animation: draw4 5s linear forwards;
-//     }
-
-// }
-
-// @keyframes draw {
-//     from {
-//         stroke-dashoffset: 600;
-//     }
-//     to {
-//         stroke-dashoffset: 0;
-//     }
-// }
-
-// @keyframes draw2 {
-//     from {
-//         stroke-dashoffset: -200;
-//     }
-//     to {
-//         stroke-dashoffset: 0;
-//     }
-// }
-
-// @keyframes draw3 {
-//     from {
-//         stroke-dashoffset: 100;
-//     }
-//     to {
-//         stroke-dashoffset: 0;
-//     }
-// }
-
-// @keyframes draw4 {
-//     from {
-//         stroke-dashoffset: 200;
-//     }
-//     to {
-//         stroke-dashoffset: 0;
-//     }
-// }
 
 }
 /////////////////////////////////// PROJECTS //////////////////////////////
@@ -811,6 +679,7 @@ header {
     //margin-top: -7rem;
     max-width: 900px;
     margin: 0 auto;
+    margin-top: 5rem;
 
     .hiddenFlex {
         display: flex;
