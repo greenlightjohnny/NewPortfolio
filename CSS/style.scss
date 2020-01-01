@@ -768,12 +768,14 @@ header {
         }
 
         h2 {
+            display: none;
             position: absolute;
             bottom: 0;
             z-index: 2;
             color: #f4f4f4;
             margin-left: 2rem;
             margin-bottom: 0;
+            //background-color: #000;
         }
 
     
@@ -784,12 +786,14 @@ header {
             left: 0;
             transform: translateX(-400px);
             transition: all ease-in-out 300ms;
-            width: 50%;
+            width: 55%;
             z-index: 4;
-            
+          
 
             ul {
                 list-style-type: none;
+                padding-inline-start: 0;
+                margin-left: 1rem;
 
                 li {
                     color: #f4f4f4;
@@ -804,6 +808,7 @@ header {
                 color: white;
                 z-index: 4;
                 margin-left: 1rem;
+                font-size: 1.6rem;
             }
 
             a {
@@ -816,7 +821,8 @@ header {
                 font-size: 1.4rem;
                 padding: .5rem 1rem;
                 text-align: center;
-                margin-top: 3rem;
+                margin-left: 1rem;
+                margin-top: 2rem;
             }
         }
         
@@ -841,7 +847,7 @@ header {
         position: absolute;
         left: 0;
         top: 0;
-        width: 50%;
+        width: 55%;
         height: 100%;
         background-color: rgba(0, 10, 10, 0.8);
       

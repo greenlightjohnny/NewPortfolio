@@ -628,12 +628,13 @@ header .myuglyface #ff {
 }
 
 .projects .one h2 {
+  display: none;
   position: absolute;
   bottom: 0;
   z-index: 2;
   color: #f4f4f4;
   margin-left: 2rem;
-  margin-bottom: -5px;
+  margin-bottom: 0;
 }
 
 .projects .one .out {
@@ -644,12 +645,15 @@ header .myuglyface #ff {
           transform: translateX(-400px);
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
-  width: 50%;
+  width: 55%;
   z-index: 4;
 }
 
 .projects .one .out ul {
   list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  margin-left: 1rem;
 }
 
 .projects .one .out ul li {
@@ -663,6 +667,7 @@ header .myuglyface #ff {
   color: white;
   z-index: 4;
   margin-left: 1rem;
+  font-size: 1.6rem;
 }
 
 .projects .one .out a {
@@ -675,7 +680,8 @@ header .myuglyface #ff {
   font-size: 1.4rem;
   padding: .5rem 1rem;
   text-align: center;
-  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
 }
 
 .projects .one::after {
@@ -684,7 +690,7 @@ header .myuglyface #ff {
   position: absolute;
   left: 0;
   top: 0;
-  width: 50%;
+  width: 55%;
   height: 100%;
   background-color: rgba(0, 10, 10, 0.8);
   -webkit-transform: translateX(-400px);
