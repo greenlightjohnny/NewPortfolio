@@ -776,6 +776,51 @@ header {
             margin-bottom: 0;
         }
 
+    
+    
+        .out {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-400px);
+            transition: all ease-in-out 300ms;
+            width: 50%;
+            z-index: 4;
+            
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    color: #f4f4f4;
+                    z-index: 4;
+                    padding-top: .5rem;
+                    font-size: 1.3rem;
+
+                }
+            }
+
+            h4 {
+                color: white;
+                z-index: 4;
+                margin-left: 1rem;
+            }
+
+            a {
+                display: block;
+                border: 1px solid turquoise;
+                width: 8rem;
+                margin: 0 auto;
+                text-decoration: none;
+                color: #f4f4f4;
+                font-size: 1.4rem;
+                padding: .5rem 1rem;
+                text-align: center;
+                margin-top: 3rem;
+            }
+        }
+        
+
         // .pro {
         //     //display: block;
         //     position: absolute;
@@ -790,6 +835,30 @@ header {
     
     }
 
+    .one::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 10, 10, 0.8);
+      
+        transform: translateX(-400px);
+        transition: all ease-in-out 300ms;
+    }
+
+    .one:hover {
+        .out {
+            transform: translateX(0);
+        }
+    }
+
+    .one:hover:after {
+        transform: translateX(0);
+    }
+
     .imageOne {
         filter: sepia(1);
     }
@@ -798,29 +867,29 @@ header {
         filter: sepia(0);
     }
 
-    .imageTwo {
-        filter: hue-rotate(270deg);
+    // .imageTwo {
+    //     filter: hue-rotate(270deg);
 
-        &:hover {
-            filter: hue-rotate(0deg);
-        }
-    }
+    //     &:hover {
+    //         filter: hue-rotate(0deg);
+    //     }
+    // }
 
-    .imageThree {
-        filter: hue-rotate(200deg);
+    // .imageThree {
+    //     filter: hue-rotate(200deg);
 
-        &:hover {
-            filter: hue-rotate(0deg);
-        }
-    }
+    //     &:hover {
+    //         filter: hue-rotate(0deg);
+    //     }
+    // }
 
-    .imageFour {
-        filter: hue-rotate(100deg);
+    // .imageFour {
+    //     filter: hue-rotate(100deg);
 
-        &:hover {
-            filter: hue-rotate(0deg);
-        }
-    }
+    //     &:hover {
+    //         filter: hue-rotate(0deg);
+    //     }
+    // }
 
     .imageFive {
         filter: hue-rotate(170deg);
